@@ -1,3 +1,4 @@
+
 // 1 Haal de RDW data op
 // 2 Selecteer de kolom in de dataset die ik wil onderzoeken/visualiseren
 // 3 Schoon deze data op

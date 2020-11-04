@@ -6,6 +6,9 @@
 
 > Waar in Nederland kan het best worden geparkeerd om direct bij een wandel- of fietsroute uit te komen?
 
+![concept sketch](images/concept_sketch.PNG)
+![ city concept sketch](images/city_concept_sketch.PNG)
+
 ## Subvragen
 
 - Waar lopen de wandelroutes door Nederland?
