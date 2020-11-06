@@ -2,15 +2,17 @@
 // 1 Haal de RDW data op
 // 2 Selecteer de kolom in de dataset die ik wil onderzoeken/visualiseren
 // 3 Schoon deze data op
-const endpoint = 'https://opendata.rdw.nl/resource/t5pc-eb34.json'
-const selectedColumn = 'areamanagerid'
+
+const endpoint = 'https://raw.githubusercontent.com/SharonV33/frontend-data/main/data/parkeergarages_1000.json'
 const areaIdColumn = getData;
+const selectedColumn = 'parkingFacilityInformation';
+const allData = [];
+console.log(allData)
 
 getData(endpoint).then(RDWData => {
     const result = filterData(RDWData, selectedColumn)
-    console.log("all data: ", RDWData)
-    console.log("one column data: ", RDWData[0])
-    console.log(result)
+    
+    allData.push(result);
 })
 
 async function getData(url){
@@ -19,6 +21,10 @@ async function getData(url){
     return data
 }
 
+
+
 function filterData(dataArray, index) {
-    return dataArray.map(item => item[index])
+    return dataArray.map(item => item[index].accessPoints[0].accessPointLocation )
   }
+
+//accessPointLocation returned niks omdat de data een grote object array mess is ^ 😩
