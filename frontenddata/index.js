@@ -49,7 +49,7 @@ function filterData(dataArray, index) {
     return dataArray.map(item => item[index].accessPoints )
   }
 
-  function getLocationArray(data){
+function getLocationArray(data){
     return data.map(item => item.accessPointLocation )
 }
 
