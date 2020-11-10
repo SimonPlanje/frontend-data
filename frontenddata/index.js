@@ -39,8 +39,8 @@ getData(endpoint).then(RDWData => {
     console.log('Objecten met LonLat: ', removeArrayLonLat)
 
     //make array of the long lat of every object
-    const createGeoArray = createLongLatArray(removeArrayLonLat)
-    console.log(createGeoArray)
+    const geoArray = createLongLatArray(removeArrayLonLat)
+    console.log(JSON.stringify(geoArray))
 })
 
 
@@ -94,10 +94,12 @@ function fixEmptyKeys(data){
 }
 
 
-
 //----------------------------------------------------------------------
 //D3 ---------⬇️⬇️⬇️-------- d3 logic ---------⬇️⬇️⬇️------------- D3
 //----------------------------------------------------------------------
+
+
+//---- MAKING THE MAP -------
 
 const svg = d3.select('svg');
 
@@ -128,15 +130,33 @@ g.attr("transform", transform);
 
 d3.json('https://cartomap.github.io/nl/wgs84/gemeente_2020.topojson')
 .then(data => {
+
   const gemeentes = topojson.feature(data, data.objects.gemeente_2020 )
+
 g.selectAll('path').data(gemeentes.features)
       .enter().append('path')
       .attr('class', 'gemeente')
         .attr('d', pathGenerator)
   .append('title')
       .text(d => d.properties.statnaam)
-
 })
+
+//----PLOTTING THE LON LAT AS CIRCLES ON THE MAP ⬇️⬇️⬇️------
+(geoArray)
+    .then(data => {
+    const parkSpots = topojson.feature(console.log(data, data[index]))
+
+    g.selectAll('circle').data(parkSpots.features)
+        .enter().append('circle')
+            .attr('class', 'parkSpots')
+
+    })
 
 //geoPath: this will convert the data path into an svg path string that we can use on svg paths
 //geoMercator: this is the type of projection type
+
+//-----------------------------------------
+//----PLOTTING THE LON LAT ON THE MAP------
+//-----------------------------------------
+
+
