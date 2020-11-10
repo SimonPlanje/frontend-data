@@ -95,5 +95,48 @@ function fixEmptyKeys(data){
 
 
 
+//----------------------------------------------------------------------
+//D3 ---------⬇️⬇️⬇️-------- d3 logic ---------⬇️⬇️⬇️------------- D3
+//----------------------------------------------------------------------
 
-//accessPointLocation returned niks omdat de data een grote object array mess is ^ 😩
+const svg = d3.select('svg');
+
+const height = parseFloat(svg.attr('height'));
+const width = +svg.attr('width');
+
+const projection = d3.geoMercator()
+.center([6, 52])                // GPS of location to zoom on
+.scale(5000)                    // This is like the zoom
+
+const pathGenerator = d3.geoPath().projection(projection)
+
+const g = svg.append('g')
+
+g.append('path')
+.attr('class', 'sphere')
+.attr('d', pathGenerator({type: 'Sphere'}));
+
+//ZOOMEN 
+svg.call(d3.zoom()
+  .on("zoom", zoomed));
+
+function zoomed({transform}) {
+g.attr("transform", transform);
+}
+
+
+
+d3.json('https://cartomap.github.io/nl/wgs84/gemeente_2020.topojson')
+.then(data => {
+  const gemeentes = topojson.feature(data, data.objects.gemeente_2020 )
+g.selectAll('path').data(gemeentes.features)
+      .enter().append('path')
+      .attr('class', 'gemeente')
+        .attr('d', pathGenerator)
+  .append('title')
+      .text(d => d.properties.statnaam)
+
+})
+
+//geoPath: this will convert the data path into an svg path string that we can use on svg paths
+//geoMercator: this is the type of projection type

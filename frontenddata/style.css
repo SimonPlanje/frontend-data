@@ -1,0 +1,18 @@
+.sphere {
+  fill: pink;
+}
+
+.gemeente {
+  fill: green;
+  stroke: orange;
+}
+
+.gemeente:hover {
+  fill: orange;
+}
+
+.gemeente-circle {
+  fill: red;
+  width: 2100px;
+  height: 2000px;
+}
