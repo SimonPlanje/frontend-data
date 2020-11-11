@@ -50,29 +50,32 @@ getData(endpoint).then(RDWData => {
     // console.log(disabledArray)
 
     const removeArrayDisabled = removeArray(disabledArray)
-    console.log(removeArrayDisabled)
+    // console.log('disabledarray: ', removeArrayDisabled)
 
     // const removeObjectsDisabled = removeObjects(removeArrayDisabled)
     // console.log(removeObjectsDisabled)
 
   //Calls the function that replaces undefined for {} so i can add and id to the object
   const objectArray = addObjectUndef(removeArrays)
-  console.log(objectArray)
+  // console.log(objectArray)
 
   // const addIdToDisabled = addIds(removeArrayDisabled)
   const addIdToLonLat = addIds(objectArray)
   console.log(addIdToLonLat)
 
+  const addIdToDisabled = addIds(removeArrayDisabled)
+  console.log('DisabledArray ', addIdToDisabled)
 
 
-  // const combineJSON = removeArrays.map((item, index) => {
-  //   return{
-  //     ...item,
-  //     ...removeArrayDisabled.filter(data => data.id === item.id)[0]
-  //   }
-  // })
+  const combineJSON = addIdToLonLat.map((item) => {
+    // console.log('dit is t item: ', item)
+    return{
+      ...item,
+      ...addIdToDisabled.filter(data => data.id === item.id)[0]
+    }
+  })
 
-  // console.log(combineJSON)
+  console.log("volledige JSON: ", combineJSON)
 
 })
 
