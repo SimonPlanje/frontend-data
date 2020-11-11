@@ -56,10 +56,12 @@ getData(endpoint).then(RDWData => {
     // console.log(removeObjectsDisabled)
 
   //Calls the function that replaces undefined for {} so i can add and id to the object
-  addObjectUndef(removeArrays)
+addObjectUndef(removeArrays)
 
-  const addIdToDisabled = addIds(removeArrayDisabled)
+
+  // const addIdToDisabled = addIds(removeArrayDisabled)
   const addIdToLonLat = addIds(removeArrays)
+  console.log(addIdToLonLat)
 
 
 
@@ -74,36 +76,34 @@ getData(endpoint).then(RDWData => {
 
 })
 
-
-
 function addObjectUndef(data){
-  const undefinedData = data.map(result => {
+  data.map(result => {
     if(result == undefined){
-      return result = {} //new Object()
+      return result = {}
     }else{
       return result
     }
   })
     
-  console.log(undefinedData)
 
-
-  data.map((item) => {
-    
+function addIds(data){
+  data.map((item, index) => {
     if(item !== undefined){
-      return item
+      return {...item, id: index + 1}
     }else{
-      return {}
+      return {id: index + 1}
     }
   })
 }
-
-function addIds(data) {
-  data.forEach((item, i) => {
-    item.id = i + 1
-  })
-  //https://stackoverflow.com/questions/50023291/add-id-to-array-of-objects-javascript
 }
+
+
+// function addIds(data) {
+//   data.forEach((item, i) => {
+//     item.id = i + 1
+//   })
+//   //https://stackoverflow.com/questions/50023291/add-id-to-array-of-objects-javascript
+// }
 
 //get disbaled data 
 function filterDisabled(dataArray, index) {
