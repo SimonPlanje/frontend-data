@@ -123,21 +123,9 @@ function zoomed({transform}) {
 g.attr("transform", transform);
 }
 
-d3.json('https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/frontenddata/onlineData/longLatData.json')
-  .then(data => {
-
-    g
-    .selectAll('circle').data(data)
-    .enter().append('circle')
-    .attr('class', 'parkSpots')
-    .attr('cx', d => projection(d.longitude))
-    .attr('cy', d => projection(d.latitude))
-    .attr('r', '10px')
-
-    
-    
-
-  })
+g.append('path')
+.attr('class', 'sphere')
+.attr('d', pathGenerator({type: 'Sphere'}));
 
 
 d3.json('https://cartomap.github.io/nl/wgs84/gemeente_2020.topojson')
@@ -153,20 +141,20 @@ g.selectAll('path').data(gemeentes.features)
       .text(d => d.properties.statnaam)
 })
 
-g.append('path')
-.attr('class', 'sphere')
-.attr('d', pathGenerator({type: 'Sphere'}));
+
+d3.json('https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/frontenddata/onlineData/longLatData.json')
+  .then(data => {
+
+    g
+    .selectAll('circle').data(data)
+    .enter().append('circle')
+    .attr('class', 'parkSpots')
+    .attr('cx', d => projection([d.longitude, d.latitude])[0])
+    .attr('cy', d => projection([d.longitude, d.latitude])[1])
+    .attr('r', '2px')
+  })
 ////----PLOTTING THE LON LAT AS CIRCLES ON THE MAP ⬇️⬇️⬇️------
 
-
-//     .then(data => {
-//     const parkSpots = topojson.feature(data, data)
-    
-//     g.selectAll('circle').data(parkSpots.features)
-//         .enter().append('circle')
-//             .attr('class', 'parkSpots')
-
-// })
 
 //geoPath: this will convert the data path into an svg path string that we can use on svg paths
 //geoMercator: this is the type of projection type
