@@ -109,14 +109,11 @@ const width = +svg.attr('width');
 const projection = d3.geoMercator()
 .center([6, 52])                // GPS of location to zoom on
 .scale(5000)                    // This is like the zoom
-
 const pathGenerator = d3.geoPath().projection(projection)
 
 const g = svg.append('g')
 
-g.append('path')
-.attr('class', 'sphere')
-.attr('d', pathGenerator({type: 'Sphere'}));
+
 
 //ZOOMEN 
 svg.call(d3.zoom()
@@ -126,6 +123,21 @@ function zoomed({transform}) {
 g.attr("transform", transform);
 }
 
+d3.json('https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/frontenddata/onlineData/longLatData.json')
+  .then(data => {
+
+    g
+    .selectAll('circle').data(data)
+    .enter().append('circle')
+    .attr('class', 'parkSpots')
+    .attr('cx', d => projection(d.longitude))
+    .attr('cy', d => projection(d.latitude))
+    .attr('r', '10px')
+
+    
+    
+
+  })
 
 
 d3.json('https://cartomap.github.io/nl/wgs84/gemeente_2020.topojson')
@@ -141,23 +153,12 @@ g.selectAll('path').data(gemeentes.features)
       .text(d => d.properties.statnaam)
 })
 
+g.append('path')
+.attr('class', 'sphere')
+.attr('d', pathGenerator({type: 'Sphere'}));
 ////----PLOTTING THE LON LAT AS CIRCLES ON THE MAP ⬇️⬇️⬇️------
-const parkSpotsDots = (data) => {
-    console.log(data);
-    const g = select('g');
-    const projection = geoMercator().scale(6000).center([5.116667, 52,17])
 
-    g
-        .selectAll('circle')
-        .data(data)
-        .enter()
-        .append('circle')
-        .attr('class', 'circles')
-        .attr('cx', function(d){ return projection(d.longitude)})
-        .attr('cy', function(d){ return projection(d.latitude)})
-        .attr('r', '4px')
-        .attr('fill', 'red')
-}
+
 //     .then(data => {
 //     const parkSpots = topojson.feature(data, data)
     
