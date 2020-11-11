@@ -9,18 +9,20 @@ const selectedColumn = 'parkingFacilityInformation';
 async function getData(url){
     const response = await fetch(url)
     const data = await response.json()
+
     return data
 }
 
 getData(endpoint).then(RDWData => {
 
-    //get all the raw RDW data
-    const allData = filterData(RDWData, selectedColumn);
+
+    //get data all data
+    const allData = filterAccesspoint(RDWData, selectedColumn);
     // console.log(allData);
 
     // removes all the arrays around the objects
     const removeArrays = removeArray(allData);
-    // console.log(removeArrays)
+    console.log(removeArrays)
 
     //replace undifined values with null
     const emptyFixed = fixEmptyKeys(removeArrays)
@@ -36,18 +38,86 @@ getData(endpoint).then(RDWData => {
 
     //Weer een een array om object weghalen
     const removeArrayLonLat = removeArray(removeNullValues);
-    console.log('Objecten met LonLat: ', removeArrayLonLat)
+    // console.log('Objecten met LonLat: ', removeArrayLonLat)
 
     // //make array of the long lat of every object
     // const geoArray = createLongLatArray(removeArrayLonLat)
     // console.log(JSON.stringify(geoArray))
+
+
+    //Get disabled Data
+    const disabledArray = filterDisabled(RDWData, selectedColumn)
+    // console.log(disabledArray)
+
+    const removeArrayDisabled = removeArray(disabledArray)
+    console.log(removeArrayDisabled)
+
+    // const removeObjectsDisabled = removeObjects(removeArrayDisabled)
+    // console.log(removeObjectsDisabled)
+
+  //Calls the function that replaces undefined for {} so i can add and id to the object
+  addObjectUndef(removeArrays)
+
+  const addIdToDisabled = addIds(removeArrayDisabled)
+  const addIdToLonLat = addIds(removeArrays)
+
+
+
+  // const combineJSON = removeArrays.map((item, index) => {
+  //   return{
+  //     ...item,
+  //     ...removeArrayDisabled.filter(data => data.id === item.id)[0]
+  //   }
+  // })
+
+  // console.log(combineJSON)
+
 })
 
 
 
-function filterData(dataArray, index) {
+function addObjectUndef(data){
+  const undefinedData = data.map(result => {
+    if(result == undefined){
+      return result = {} //new Object()
+    }else{
+      return result
+    }
+  })
+    
+  console.log(undefinedData)
+
+
+  data.map((item) => {
+    
+    if(item !== undefined){
+      return item
+    }else{
+      return {}
+    }
+  })
+}
+
+function addIds(data) {
+  data.forEach((item, i) => {
+    item.id = i + 1
+  })
+  //https://stackoverflow.com/questions/50023291/add-id-to-array-of-objects-javascript
+}
+
+//get disbaled data 
+function filterDisabled(dataArray, index) {
+  return dataArray.map(item => item[index].specifications )
+}
+
+// function removeObjects(data){
+//   return data.filter(result => result.chargingPointCapacity !== undefined);
+// }
+
+function filterAccesspoint(dataArray, index) {
     return dataArray.map(item => item[index].accessPoints )
   }
+
 
 function getLocationArray(data){
     return data.map(item => item.accessPointLocation )
@@ -139,7 +209,8 @@ g.selectAll('path').data(gemeentes.features)
         .attr('d', pathGenerator)
   .append('title')
       .text(d => d.properties.statnaam)
-})
+
+      })
 
 
 d3.json('https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/frontenddata/onlineData/longLatData.json')
@@ -152,7 +223,9 @@ d3.json('https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/fronte
     .attr('cx', d => projection([d.longitude, d.latitude])[0])
     .attr('cy', d => projection([d.longitude, d.latitude])[1])
     .attr('r', '2px')
-  })
+    .attr('fill', 'red')
+
+    })
 ////----PLOTTING THE LON LAT AS CIRCLES ON THE MAP ⬇️⬇️⬇️------
 
 
