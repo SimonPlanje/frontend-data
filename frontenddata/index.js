@@ -22,7 +22,7 @@ getData(endpoint).then(RDWData => {
 
     // removes all the arrays around the objects
     const removeArrays = removeArray(allData);
-    console.log(removeArrays)
+    // console.log(removeArrays)
 
     //replace undifined values with null
     const emptyFixed = fixEmptyKeys(removeArrays)
@@ -50,7 +50,7 @@ getData(endpoint).then(RDWData => {
     // console.log(disabledArray)
 
     const removeArrayDisabled = removeArray(disabledArray)
-    // console.log('disabledarray: ', removeArrayDisabled)
+    // console.log('disabledArray: ', removeArrayDisabled)
 
     // const removeObjectsDisabled = removeObjects(removeArrayDisabled)
     // console.log(removeObjectsDisabled)
@@ -59,12 +59,13 @@ getData(endpoint).then(RDWData => {
   const objectArray = addObjectUndef(removeArrays)
   // console.log(objectArray)
 
-  // const addIdToDisabled = addIds(removeArrayDisabled)
+  //adds id's to the lonlat data objects so I can combine it with the other data variable
   const addIdToLonLat = addIds(objectArray)
-  console.log(addIdToLonLat)
+  // console.log(addIdToLonLat)
 
+  //adds id's to the disabled data objects so I can combine it with the other data variable
   const addIdToDisabled = addIds(removeArrayDisabled)
-  console.log('DisabledArray ', addIdToDisabled)
+  // console.log('DisabledArray ', addIdToDisabled)
 
 
   const combineJSON = addIdToLonLat.map((item) => {
@@ -72,6 +73,7 @@ getData(endpoint).then(RDWData => {
     return{
       ...item,
       ...addIdToDisabled.filter(data => data.id === item.id)[0]
+      //https://flaviocopes.com/how-to-merge-objects-javascript/
     }
   })
 
@@ -230,7 +232,6 @@ d3.json('https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/fronte
     .attr('cx', d => projection([d.longitude, d.latitude])[0])
     .attr('cy', d => projection([d.longitude, d.latitude])[1])
     .attr('r', '2px')
-    .attr('fill', 'red')
 
     })
 ////----PLOTTING THE LON LAT AS CIRCLES ON THE MAP ⬇️⬇️⬇️------

@@ -1,18 +1,18 @@
 .sphere {
-  fill: pink;
+  fill: #00010a;
 }
 
 .gemeente {
-  fill: green;
-  stroke: orange;
+  fill: transparent;
+  stroke: cyan;
+  stroke-width: 0.5px;
 }
 
 .gemeente:hover {
   fill: orange;
 }
 
-.circles {
-  fill: red;
-  width: 2100px;
-  height: 2000px;
+.parkSpots {
+  fill: rgb(158, 42, 21);
+  stroke: rgb(255, 169, 169);
 }
