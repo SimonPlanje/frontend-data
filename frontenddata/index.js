@@ -16,31 +16,31 @@ getData(endpoint).then(RDWData => {
 
     //get all the raw RDW data
     const allData = filterData(RDWData, selectedColumn);
-    console.log(allData);
+    // console.log(allData);
 
     // removes all the arrays around the objects
     const removeArrays = removeArray(allData);
-    console.log(removeArrays)
+    // console.log(removeArrays)
 
     //replace undifined values with null
     const emptyFixed = fixEmptyKeys(removeArrays)
-    console.log('alle empty slots zijn weg: ', emptyFixed)
+    // console.log('alle empty slots zijn weg: ', emptyFixed)
 
     //filter out the long lat
     const longLatArray = getLocationArray(emptyFixed);
-    console.log('LongLat: ', longLatArray)
+    // console.log('LongLat: ', longLatArray)
 
     //Alle null waardes weghalen
     const removeNullValues = removeNulls(longLatArray)
-    console.log('Only log array: ', removeNullValues)
+    // console.log('Only log array: ', removeNullValues)
 
     //Weer een een array om object weghalen
     const removeArrayLonLat = removeArray(removeNullValues);
     console.log('Objecten met LonLat: ', removeArrayLonLat)
 
-    //make array of the long lat of every object
-    const geoArray = createLongLatArray(removeArrayLonLat)
-    console.log(JSON.stringify(geoArray))
+    // //make array of the long lat of every object
+    // const geoArray = createLongLatArray(removeArrayLonLat)
+    // console.log(JSON.stringify(geoArray))
 })
 
 
@@ -63,12 +63,12 @@ function removeNulls(data){
     return data.filter(result => result !== null);
 }
 
-function createLongLatArray(data){
-    let lat = data.map(result => result.latitude )
-    let long = data.map(result => result.longitude)
-    return lat.map((latitude, index) =>{
-        return [latitude, long[index]]}) 
-}
+// function createLongLatArray(data){
+//     let lat = data.map(result => result.latitude )
+//     let long = data.map(result => result.longitude)
+//     return lat.map((latitude, index) =>{
+//         return [latitude, long[index]]}) 
+// }
 
 
 function fixEmptyKeys(data){
@@ -141,16 +141,31 @@ g.selectAll('path').data(gemeentes.features)
       .text(d => d.properties.statnaam)
 })
 
-//----PLOTTING THE LON LAT AS CIRCLES ON THE MAP ⬇️⬇️⬇️------
-(geoArray)
-    .then(data => {
-    const parkSpots = topojson.feature(console.log(data, data[index]))
+////----PLOTTING THE LON LAT AS CIRCLES ON THE MAP ⬇️⬇️⬇️------
+const parkSpotsDots = (data) => {
+    console.log(data);
+    const g = select('g');
+    const projection = geoMercator().scale(6000).center([5.116667, 52,17])
 
-    g.selectAll('circle').data(parkSpots.features)
-        .enter().append('circle')
-            .attr('class', 'parkSpots')
+    g
+        .selectAll('circle')
+        .data(data)
+        .enter()
+        .append('circle')
+        .attr('class', 'circles')
+        .attr('cx', function(d){ return projection(d.longitude)})
+        .attr('cy', function(d){ return projection(d.latitude)})
+        .attr('r', '4px')
+        .attr('fill', 'red')
+}
+//     .then(data => {
+//     const parkSpots = topojson.feature(data, data)
+    
+//     g.selectAll('circle').data(parkSpots.features)
+//         .enter().append('circle')
+//             .attr('class', 'parkSpots')
 
-    })
+// })
 
 //geoPath: this will convert the data path into an svg path string that we can use on svg paths
 //geoMercator: this is the type of projection type
