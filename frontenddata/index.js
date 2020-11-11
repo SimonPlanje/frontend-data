@@ -56,11 +56,11 @@ getData(endpoint).then(RDWData => {
     // console.log(removeObjectsDisabled)
 
   //Calls the function that replaces undefined for {} so i can add and id to the object
-addObjectUndef(removeArrays)
-
+  const objectArray = addObjectUndef(removeArrays)
+  console.log(objectArray)
 
   // const addIdToDisabled = addIds(removeArrayDisabled)
-  const addIdToLonLat = addIds(removeArrays)
+  const addIdToLonLat = addIds(objectArray)
   console.log(addIdToLonLat)
 
 
@@ -76,26 +76,30 @@ addObjectUndef(removeArrays)
 
 })
 
+
+
 function addObjectUndef(data){
-  data.map(result => {
+  const undefinedData = data.map(result => {
     if(result == undefined){
       return result = {}
     }else{
       return result
     }
   })
-    
+return undefinedData
+}
 
 function addIds(data){
-  data.map((item, index) => {
-    if(item !== undefined){
+  const idAdd = data.map((item, index) => {
+    if(index !== undefined){
       return {...item, id: index + 1}
     }else{
       return {id: index + 1}
     }
   })
+return idAdd
 }
-}
+
 
 
 // function addIds(data) {
