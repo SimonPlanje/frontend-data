@@ -16,44 +16,44 @@ async function getData(url){
 getData(endpoint).then(RDWData => {
 
 
-    //get data all data
-    const allData = filterAccesspoint(RDWData, selectedColumn);
-    // console.log(allData);
+  //get data all data
+  const allData = filterAccesspoint(RDWData, selectedColumn);
+  // console.log(allData);
 
-    // removes all the arrays around the objects
-    const removeArrays = removeArray(allData);
-    // console.log(removeArrays)
+  // removes all the arrays around the objects
+  const removeArrays = removeArray(allData);
+  // console.log(removeArrays)
 
-    //replace undifined values with null
-    const emptyFixed = fixEmptyKeys(removeArrays)
-    // console.log('alle empty slots zijn weg: ', emptyFixed)
+  //replace undifined values with null
+  const emptyFixed = fixEmptyKeys(removeArrays)
+  // console.log('alle empty slots zijn weg: ', emptyFixed)
 
-    //filter out the long lat
-    const longLatArray = getLocationArray(emptyFixed);
-    // console.log('LongLat: ', longLatArray)
+  //filter out the long lat
+  const longLatArray = getLocationArray(emptyFixed);
+  // console.log('LongLat: ', longLatArray)
 
-    //Alle null waardes weghalen
-    const removeNullValues = removeNulls(longLatArray)
-    // console.log('Only log array: ', removeNullValues)
+  //Alle null waardes weghalen
+  const removeNullValues = removeNulls(longLatArray)
+  // console.log('Only log array: ', removeNullValues)
 
-    //Weer een een array om object weghalen
-    const removeArrayLonLat = removeArray(removeNullValues);
-    // console.log('Objecten met LonLat: ', removeArrayLonLat)
+  //Weer een een array om object weghalen
+  const removeArrayLonLat = removeArray(removeNullValues);
+  // console.log('Objecten met LonLat: ', removeArrayLonLat)
 
-    // //make array of the long lat of every object
-    // const geoArray = createLongLatArray(removeArrayLonLat)
-    // console.log(JSON.stringify(geoArray))
+  // //make array of the long lat of every object
+  // const geoArray = createLongLatArray(removeArrayLonLat)
+  // console.log(JSON.stringify(geoArray))
 
 
-    //Get disabled Data
-    const disabledArray = filterDisabled(RDWData, selectedColumn)
-    // console.log(disabledArray)
+  //Get disabled Data
+  const disabledArray = filterDisabled(RDWData, selectedColumn)
+  // console.log(disabledArray)
 
-    const removeArrayDisabled = removeArray(disabledArray)
-    // console.log('disabledArray: ', removeArrayDisabled)
+  const removeArrayDisabled = removeArray(disabledArray)
+  // console.log('disabledArray: ', removeArrayDisabled)
 
-    // const removeObjectsDisabled = removeObjects(removeArrayDisabled)
-    // console.log(removeObjectsDisabled)
+  // const removeObjectsDisabled = removeObjects(removeArrayDisabled)
+  // console.log(removeObjectsDisabled)
 
   //Calls the function that replaces undefined for {} so i can add and id to the object
   const objectArray = addObjectUndef(removeArrays)
@@ -68,20 +68,20 @@ getData(endpoint).then(RDWData => {
   // console.log('DisabledArray ', addIdToDisabled)
 
 
-  const combineJSON = addIdToLonLat.map((item) => {
-    // console.log('dit is t item: ', item)
-    return{
-      ...item,
-      ...addIdToDisabled.filter(data => data.id === item.id)[0]
-      //https://flaviocopes.com/how-to-merge-objects-javascript/
-    }
-  })
+const combineJSON = addIdToLonLat.map((item) => {
+  // console.log('dit is t item: ', item)
+  return{
+    ...item,
+    ...addIdToDisabled.filter(data => data.id === item.id)[0]
+    //https://flaviocopes.com/how-to-merge-objects-javascript/
+  }
+})
 
   // console.log("volledige JSON: ", combineJSON)
 
   //and than as last we filter out the not usable parking spots
   const filterUselessData = filterData(combineJSON)
-  console.log(filterUselessData)
+  console.log(JSON.stringify(filterUselessData))
 
 })
 
@@ -107,17 +107,9 @@ function addIds(data){
     }else{
       return {id: index + 1}
     }
+    //https://stackoverflow.com/questions/50023291/add-id-to-array-of-objects-javascript
   })
 }
-
-
-
-// function addIds(data) {
-//   data.forEach((item, i) => {
-//     item.id = i + 1
-//   })
-//   //https://stackoverflow.com/questions/50023291/add-id-to-array-of-objects-javascript
-// }
 
 //get disbaled data 
 function filterDisabled(dataArray, index) {
@@ -172,8 +164,6 @@ function fixEmptyKeys(data){
 
       // Use object destrucuring to replace all default values with the ones we have
       return data.map((item) => ({...def, ...item}));
-
-
       //source: https://stackoverflow.com/questions/47870887/how-to-fill-in-missing-keys-in-an-array-of-objects/47871014#47871014?newreg=7adc7a5e48b7436d99619b4aad68d8f8
 }
 
