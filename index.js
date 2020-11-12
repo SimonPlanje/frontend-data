@@ -299,7 +299,7 @@ d3.json('https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/online
     svg.append('text').attr('x', 100).attr('y', 130).text('Alleen opladen').attr('fill', 'white').style('font-size', '15px').attr('alignment-baseline','middle')
     svg.append('text').attr('x', 100).attr('y', 160).text('Alleen invaliden').attr('fill', 'white').style('font-size', '15px').attr('alignment-baseline','middle')
     svg.append('text').attr('x', 100).attr('y', 190).text('Geen invaliden en oplaadpunt').attr('fill', 'white').style('font-size', '15px').attr('alignment-baseline','middle')
-
+//UGLY STATIC LEGEND INSPIRED BY: http://bl.ocks.org/ZJONSSON/3918369
 
  // This function is gonna change the opacity and size of selected and unselected circles
  function update(){
@@ -308,8 +308,6 @@ d3.json('https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/online
   d3.selectAll('.checkbox').each(function(d){
     cb = d3.select(this);
     group = cb.property('value')
-
-    console.log(d3.selectAll('.disabled'))
 
     // If the box is check, I show the group
     if(cb.property('checked')){
@@ -338,5 +336,5 @@ update()
     })
 
 
-
+    
 
