@@ -44,11 +44,11 @@ git clone https://github.com/SimonPlanje/frontend-data.git
 
 ## Bronnen
 
-https://www.d3-graph-gallery.com/graph/bubblemap_buttonControl.html
-http://bl.ocks.org/ZJONSSON/3918369
-https://stackoverflow.com/questions/47870887/how-to-fill-in-missing-keys-in-an-array-of-objects/47871014#47871014?newreg=7adc7a5e48b7436d99619b4aad68d8f8
-https://stackoverflow.com/questions/50023291/add-id-to-array-of-objects-javascript
-https://www.youtube.com/watch?v=BMUiFMZr7vk&t=554s
-https://curran.github.io/dataviz-course-2018/
+- https://www.d3-graph-gallery.com/graph/bubblemap_buttonControl.html
+- http://bl.ocks.org/ZJONSSON/3918369
+- https://stackoverflow.com/questions/47870887/how-to-fill-in-missing-keys-in-an-array-of-objects/47871014#47871014?newreg=7adc7a5e48b7436d99619b4aad68d8f8
+- https://stackoverflow.com/questions/50023291/add-id-to-array-of-objects-javascript
+- https://www.youtube.com/watch?v=BMUiFMZr7vk&t=554s
+- https://curran.github.io/dataviz-course-2018/
 
 MIT License
