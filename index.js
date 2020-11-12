@@ -76,7 +76,7 @@ const combineJSON = addIdToLonLat.map((item) => {
   const addsClassesDisabled = addClassesDisabled(addsClassesNone)
   const addsClassesCharging = addClassesCharging(addsClassesDisabled)
   const addsClassesBoth = addClassesBoth(addsClassesCharging)
-  console.log('both: ', JSON.stringify(addsClassesBoth))
+  // console.log('both: ', JSON.stringify((addsClassesBoth)))
 
 
 
@@ -236,15 +236,13 @@ const pathGenerator = d3.geoPath().projection(projection)
 //geoMercator: this is the type of projection type
 
 const g = svg.append('g')
-
+var radius = '2px'
 //Bepaal kleur voor circles
-var colorDisabled = d3.scaleOrdinal()
-    .domain([true, false])
-    .range(['red', 'pink'])
+var color = d3.scaleOrdinal()
+    .domain(['none', 'all', 'disabled', 'charging'])
+    .range(['red', 'pink', 'purple', 'lime'])
 
-    var colorElectric = d3.scaleOrdinal()
-    .domain([0, 1])
-    .range(['pink', 'yellow'])
+
 //source: https://www.d3-graph-gallery.com/graph/bubblemap_buttonControl.html
 
 //ZOOMEN 
@@ -283,14 +281,14 @@ d3.json('https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/online
     g
     .selectAll('circle').data(data)
     .enter().append('circle')
-    .attr('class', 'parkSpots')
+    .attr('class', function(d){ return d.id })
     .attr('cx', d => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[0])
     .attr('cy', d => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[1])
-    .attr('r', '1.5px')
-    .attr('fill', function(d){ return colorDisabled(d.disabledAccess)})
-    .attr('fill', function(d){ return colorElectric(d.chargingPointCapacity)})
+    .attr('r', radius)
+    .attr('fill', function(d){ return color(d.id)})
+    .attr('fill', function(d){ return color(d.id)})
+    .attr("fill-opacity", .8)
     //gebruik de color variable om de true en false disabled access een verschillende kleur te geven.
-
 
  // This function is gonna change the opacity and size of selected and unselected circles
  function update(){
@@ -300,23 +298,26 @@ d3.json('https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/online
     cb = d3.select(this);
     group = cb.property("value")
 
+    console.log(d3.selectAll('.disabled'))
+
     // If the box is check, I show the group
     if(cb.property("checked")){
-      console.log(svg.selectAll("."+group))
-      // .transition()
-      // .duration(1000)
-      // .style("opacity", 1)
+      g.selectAll("."+group)
+      .transition()
+      .duration(1000)
+      .style("opacity", 1)
+      .attr('r', radius)
 
     // Otherwise I hide it
     }else{
-      svg.selectAll("#"+group)
+      g.selectAll("."+group)
       .transition()
       .duration(1000)
       .style("opacity", 0)
+      .attr("r", 0)
     }
   })
 }
-
 d3.selectAll('.checkbox').on('change', update)
 
 update()
