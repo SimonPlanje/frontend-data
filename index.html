@@ -7,8 +7,18 @@
     <title>front-end data</title>
 </head>
 <body>
-    <h1>Hier komt de datavisualisatie van de RDW dataset</h1>
+    <h1>Where are the parkingspots for disable</h1>
     <svg width="960" height="500"></svg>
+
+
+<form>
+        <input type="checkbox" class="checkbox" value="id" checked><label>Alle parkeerplekken</label>
+        <input type="checkbox" class="checkbox" value="true" checked><label>Parkeerplekken voor beperkten</label>
+        <input type="checkbox" class="checkbox" value="0" checked><label>Parkeerplekken met oplaadpunt</label>
+</form>
+
+
+
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
     <script src='index.js'></script>

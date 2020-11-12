@@ -83,11 +83,31 @@ const combineJSON = addIdToLonLat.map((item) => {
   const filterUselessData = filterData(combineJSON)
   console.log(filterUselessData)
 
+  const addsClassesNone = addClassesNone(filterUselessData)
+  console.log('none', addsClassesNone)
+
+  const addsClassesDisabled = addClassesDisabled(addsClassesNone)
+  console.log('disabled: ', addsClassesDisabled)
+
+  const addsClassesCharging = addClassesCharging(addsClassesDisabled)
+  console.log('charging: ', addsClassesCharging)
+  
+  const addsClassesBoth = addClassesBoth(addsClassesCharging)
+  console.log('both: ', JSON.stringify(addsClassesBoth))
+
+
+
 })
 
+
+
+//FUNCTION PART
+
+//remove data that cant be used
 function filterData(data){
   return data.filter(result => result.accessPointLocation);
 }
+
 
 
 function addObjectUndef(data){
@@ -108,6 +128,51 @@ function addIds(data){
       return {id: index + 1}
     }
     //https://stackoverflow.com/questions/50023291/add-id-to-array-of-objects-javascript
+  })
+}
+
+function addClassesNone(data){
+  return data.map((item) => {
+    // console.log('item', item)
+    if(item.chargingPointCapacity == 0 && item.disabledAccess == false){
+      return {...item, class: 'none'}
+    }else{
+      return item
+    }
+
+  })
+}
+
+function addClassesDisabled(data){
+  return data.map((item) => {
+  if(item.chargingPointCapacity == 0 && item.disabledAccess == true){
+    return {...item, class: 'disabled'}
+  } else{
+    return item
+  }
+})
+}
+
+function addClassesCharging(data){
+  return data.map((item) => {
+
+  if(item.chargingPointCapacity > 0 && item.disabledAccess == false){
+    return {...item, class: 'charging'}
+  } else{
+    return item
+  }
+})
+}
+
+function addClassesBoth(data){
+  return data.map((item) => {
+    // console.log('item', item)
+    if(item.chargingPointCapacity > 0 && item.disabledAccess == true){
+      return {...item, class: 'both'}
+    }else{
+      return item
+    }
+
   })
 }
 
@@ -190,9 +255,13 @@ const pathGenerator = d3.geoPath().projection(projection)
 const g = svg.append('g')
 
 //Bepaal kleur voor circles
-var color = d3.scaleOrdinal()
-    .domain([true, false ])
-    .range(['red', 'blue'])
+var colorDisabled = d3.scaleOrdinal()
+    .domain([true, false])
+    .range(['red', 'pink'])
+
+    var colorElectric = d3.scaleOrdinal()
+    .domain([0, 1])
+    .range(['pink', 'yellow'])
 //source: https://www.d3-graph-gallery.com/graph/bubblemap_buttonControl.html
 
 //ZOOMEN 
@@ -234,15 +303,41 @@ d3.json('https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/online
     .attr('class', 'parkSpots')
     .attr('cx', d => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[0])
     .attr('cy', d => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[1])
-    .attr('r', '2px')
-    .attr('fill', function(d){ return color(d.disabledAccess)})
-    
+    .attr('r', '1.5px')
+    .attr('fill', function(d){ return colorDisabled(d.disabledAccess)})
+    .attr('fill', function(d){ return colorElectric(d.chargingPointCapacity)})
+    //gebruik de color variable om de true en false disabled access een verschillende kleur te geven.
+
+
+ // This function is gonna change the opacity and size of selected and unselected circles
+//  function update(){
+
+//   // For each check box:
+//   d3.selectAll(".checkbox").each(function(d){
+//     cb = d3.select(this);
+//     group = cb.property("value")
+
+//     // If the box is check, I show the group
+//     if(cb.property("checked")){
+//       console.log(svg.selectAll("0"))
+//       // .transition()
+//       // .duration(1000)
+//       // .style("opacity", 1)
+
+//     // Otherwise I hide it
+//     }else{
+//       svg.selectAll("."+group)
+//       .transition()
+//       .duration(1000)
+//       .style("opacity", 0)
+//     }
+//   })
+// }
+
+// d3.selectAll('.checkbox').on('change', update)
+
+// update()
+
+
     })
-
-
-
-//-----------------------------------------
-//----PLOTTING THE LON LAT ON THE MAP------
-//-----------------------------------------
-
 
