@@ -18,27 +18,21 @@ getData(endpoint).then(RDWData => {
 
   //get data all data
   const allData = filterAccesspoint(RDWData, selectedColumn);
-  // console.log(allData);
 
   // removes all the arrays around the objects
   const removeArrays = removeArray(allData);
-  // console.log(removeArrays)
 
   //replace undifined values with null
   const emptyFixed = fixEmptyKeys(removeArrays)
-  // console.log('alle empty slots zijn weg: ', emptyFixed)
 
   //filter out the long lat
   const longLatArray = getLocationArray(emptyFixed);
-  // console.log('LongLat: ', longLatArray)
 
   //Alle null waardes weghalen
   const removeNullValues = removeNulls(longLatArray)
-  // console.log('Only log array: ', removeNullValues)
 
   //Weer een een array om object weghalen
   const removeArrayLonLat = removeArray(removeNullValues);
-  // console.log('Objecten met LonLat: ', removeArrayLonLat)
 
   // //make array of the long lat of every object
   // const geoArray = createLongLatArray(removeArrayLonLat)
@@ -47,25 +41,19 @@ getData(endpoint).then(RDWData => {
 
   //Get disabled Data
   const disabledArray = filterDisabled(RDWData, selectedColumn)
-  // console.log(disabledArray)
 
   const removeArrayDisabled = removeArray(disabledArray)
-  // console.log('disabledArray: ', removeArrayDisabled)
 
   // const removeObjectsDisabled = removeObjects(removeArrayDisabled)
-  // console.log(removeObjectsDisabled)
 
   //Calls the function that replaces undefined for {} so i can add and id to the object
   const objectArray = addObjectUndef(removeArrays)
-  // console.log(objectArray)
 
   //adds id's to the lonlat data objects so I can combine it with the other data variable
   const addIdToLonLat = addIds(objectArray)
-  // console.log(addIdToLonLat)
 
   //adds id's to the disabled data objects so I can combine it with the other data variable
   const addIdToDisabled = addIds(removeArrayDisabled)
-  // console.log('DisabledArray ', addIdToDisabled)
 
 
 const combineJSON = addIdToLonLat.map((item) => {
@@ -81,17 +69,12 @@ const combineJSON = addIdToLonLat.map((item) => {
 
   //and than as last we filter out the not usable parking spots
   const filterUselessData = filterData(combineJSON)
-  console.log(filterUselessData)
+  // console.log(filterUselessData)
 
+  //Aantal loops om classes toe te voegen aan de dataset
   const addsClassesNone = addClassesNone(filterUselessData)
-  console.log('none', addsClassesNone)
-
   const addsClassesDisabled = addClassesDisabled(addsClassesNone)
-  console.log('disabled: ', addsClassesDisabled)
-
   const addsClassesCharging = addClassesCharging(addsClassesDisabled)
-  console.log('charging: ', addsClassesCharging)
-  
   const addsClassesBoth = addClassesBoth(addsClassesCharging)
   console.log('both: ', JSON.stringify(addsClassesBoth))
 
@@ -135,7 +118,7 @@ function addClassesNone(data){
   return data.map((item) => {
     // console.log('item', item)
     if(item.chargingPointCapacity == 0 && item.disabledAccess == false){
-      return {...item, class: 'none'}
+      return {...item, id: 'none'}
     }else{
       return item
     }
@@ -146,7 +129,7 @@ function addClassesNone(data){
 function addClassesDisabled(data){
   return data.map((item) => {
   if(item.chargingPointCapacity == 0 && item.disabledAccess == true){
-    return {...item, class: 'disabled'}
+    return {...item, id: 'disabled'}
   } else{
     return item
   }
@@ -157,7 +140,7 @@ function addClassesCharging(data){
   return data.map((item) => {
 
   if(item.chargingPointCapacity > 0 && item.disabledAccess == false){
-    return {...item, class: 'charging'}
+    return {...item, id: 'charging'}
   } else{
     return item
   }
@@ -168,7 +151,7 @@ function addClassesBoth(data){
   return data.map((item) => {
     // console.log('item', item)
     if(item.chargingPointCapacity > 0 && item.disabledAccess == true){
-      return {...item, class: 'both'}
+      return {...item, id: 'both'}
     }else{
       return item
     }
@@ -310,33 +293,33 @@ d3.json('https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/online
 
 
  // This function is gonna change the opacity and size of selected and unselected circles
-//  function update(){
+ function update(){
 
-//   // For each check box:
-//   d3.selectAll(".checkbox").each(function(d){
-//     cb = d3.select(this);
-//     group = cb.property("value")
+  // For each check box:
+  d3.selectAll(".checkbox").each(function(d){
+    cb = d3.select(this);
+    group = cb.property("value")
 
-//     // If the box is check, I show the group
-//     if(cb.property("checked")){
-//       console.log(svg.selectAll("0"))
-//       // .transition()
-//       // .duration(1000)
-//       // .style("opacity", 1)
+    // If the box is check, I show the group
+    if(cb.property("checked")){
+      console.log(svg.selectAll("."+group))
+      // .transition()
+      // .duration(1000)
+      // .style("opacity", 1)
 
-//     // Otherwise I hide it
-//     }else{
-//       svg.selectAll("."+group)
-//       .transition()
-//       .duration(1000)
-//       .style("opacity", 0)
-//     }
-//   })
-// }
+    // Otherwise I hide it
+    }else{
+      svg.selectAll("#"+group)
+      .transition()
+      .duration(1000)
+      .style("opacity", 0)
+    }
+  })
+}
 
-// d3.selectAll('.checkbox').on('change', update)
+d3.selectAll('.checkbox').on('change', update)
 
-// update()
+update()
 
 
     })

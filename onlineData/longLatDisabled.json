@@ -24,13 +24,12 @@
       "country": "Nederland",
       "phoneNumbers": ["140596"]
     },
-    "id": 1,
+    "id": "none",
     "capacity": 22,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -57,14 +56,13 @@
       "country": "Nederland",
       "phoneNumbers": ["050-3018911"]
     },
-    "id": 2,
+    "id": "none",
     "validityEndOfPeriod": null,
     "capacity": 28,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -91,14 +89,13 @@
       "country": "Nederland",
       "phoneNumbers": ["050-3018911"]
     },
-    "id": 4,
+    "id": "none",
     "validityEndOfPeriod": null,
     "capacity": 20,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2.1,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -125,14 +122,13 @@
       "country": "Nederland",
       "phoneNumbers": ["140596"]
     },
-    "id": 9,
+    "id": "none",
     "validityEndOfPeriod": null,
     "capacity": 18,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2.1,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1595513470,
@@ -159,13 +155,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 12,
+    "id": "none",
     "capacity": 20,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1575993847,
@@ -192,13 +187,12 @@
       "country": "Nederland",
       "phoneNumbers": ["140596"]
     },
-    "id": 14,
+    "id": "none",
     "capacity": 21,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1575993949,
@@ -225,13 +219,12 @@
       "country": "Nederland",
       "phoneNumbers": ["140596"]
     },
-    "id": 16,
+    "id": "none",
     "capacity": 25,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1562232264,
@@ -258,13 +251,12 @@
       "country": "Nederland",
       "phoneNumbers": ["088 5421300"]
     },
-    "id": 17,
+    "id": "both",
     "capacity": 1040,
     "chargingPointCapacity": 8,
     "disabledAccess": true,
     "minimumHeightInMeters": 2,
-    "usage": "Garageparkeren",
-    "class": "both"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1414800000,
@@ -291,14 +283,13 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 19,
+    "id": "none",
     "validityEndOfPeriod": null,
     "capacity": 385,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1456935361,
@@ -325,13 +316,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 26,
+    "id": "charging",
     "capacity": 216,
     "chargingPointCapacity": 4,
     "disabledAccess": false,
     "minimumHeightInMeters": 2.05,
-    "usage": "Garageparkeren",
-    "class": "charging"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1575995801,
@@ -358,13 +348,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 27,
+    "id": "none",
     "capacity": 600,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1414800000,
@@ -391,14 +380,13 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 29,
+    "id": "none",
     "validityEndOfPeriod": null,
     "capacity": 600,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1414800000,
@@ -425,14 +413,13 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 30,
+    "id": "none",
     "validityEndOfPeriod": null,
     "capacity": 880,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1414800000,
@@ -459,14 +446,13 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 32,
+    "id": "none",
     "validityEndOfPeriod": null,
     "capacity": 100,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1561989635,
@@ -493,13 +479,12 @@
       "country": "Nederland",
       "phoneNumbers": ["088 5421300"]
     },
-    "id": 78,
+    "id": "both",
     "capacity": 300,
     "chargingPointCapacity": 2,
     "disabledAccess": true,
     "minimumHeightInMeters": 1.9,
-    "usage": "Garageparkeren",
-    "class": "both"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1575995265,
@@ -526,13 +511,12 @@
       "country": "Nederland",
       "phoneNumbers": ["088 54 21 300"]
     },
-    "id": 80,
+    "id": "both",
     "capacity": 2149,
     "chargingPointCapacity": 2,
     "disabledAccess": true,
     "minimumHeightInMeters": 1.9,
-    "usage": "Garageparkeren",
-    "class": "both"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1562232285,
@@ -559,13 +543,12 @@
       "country": "Nederland",
       "phoneNumbers": ["088 5421300"]
     },
-    "id": 84,
+    "id": "both",
     "capacity": 514,
     "chargingPointCapacity": 10,
     "disabledAccess": true,
     "minimumHeightInMeters": 2.05,
-    "usage": "Garageparkeren",
-    "class": "both"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1562232300,
@@ -592,12 +575,11 @@
       "country": "Nederland",
       "phoneNumbers": ["088 54 21 300"]
     },
-    "id": 87,
+    "id": "both",
     "chargingPointCapacity": 10,
     "disabledAccess": true,
     "minimumHeightInMeters": 2,
-    "usage": "Garageparkeren",
-    "class": "both"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1562232278,
@@ -624,13 +606,12 @@
       "country": "Nederland",
       "phoneNumbers": ["088 54 21 300"]
     },
-    "id": 90,
+    "id": "both",
     "capacity": 216,
     "chargingPointCapacity": 4,
     "disabledAccess": true,
     "minimumHeightInMeters": 2.05,
-    "usage": "Garageparkeren",
-    "class": "both"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1571411933,
@@ -657,13 +638,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 93,
+    "id": "none",
     "capacity": 40,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpool Parkeren",
-    "class": "none"
+    "usage": "Carpool Parkeren"
   },
   {
     "validityStartOfPeriod": 1570632042,
@@ -690,13 +670,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 96,
+    "id": "none",
     "capacity": 200,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -723,14 +702,13 @@
       "country": "Nederland",
       "phoneNumbers": ["14036"]
     },
-    "id": 97,
+    "id": "none",
     "validityEndOfPeriod": null,
     "capacity": 30,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1595581567,
@@ -757,13 +735,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 98,
+    "id": "none",
     "capacity": 41,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -790,14 +767,13 @@
       "country": "Nederland",
       "phoneNumbers": ["14036"]
     },
-    "id": 99,
+    "id": "none",
     "validityEndOfPeriod": null,
     "capacity": 371,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1594642003,
@@ -824,13 +800,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 100,
+    "id": "charging",
     "capacity": 209,
     "chargingPointCapacity": 2,
     "disabledAccess": false,
     "minimumHeightInMeters": 1.9,
-    "usage": "Garageparkeren",
-    "class": "charging"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1557745611,
@@ -857,13 +832,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 101,
+    "id": "none",
     "capacity": 262,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Terreinparkeren",
-    "class": "none"
+    "usage": "Terreinparkeren"
   },
   {
     "validityStartOfPeriod": 1557753301,
@@ -890,13 +864,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 102,
+    "id": "charging",
     "capacity": 381,
     "chargingPointCapacity": 2,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Garageparkeren",
-    "class": "charging"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1557753675,
@@ -923,13 +896,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 103,
+    "id": "charging",
     "capacity": 419,
     "chargingPointCapacity": 2,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Garageparkeren",
-    "class": "charging"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1594895195,
@@ -956,13 +928,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 104,
+    "id": "charging",
     "capacity": 445,
     "chargingPointCapacity": 2,
     "disabledAccess": false,
     "minimumHeightInMeters": 1.9,
-    "usage": "Garageparkeren",
-    "class": "charging"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1595851067,
@@ -989,13 +960,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 105,
+    "id": "none",
     "capacity": 22,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1595585394,
@@ -1022,13 +992,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 106,
+    "id": "none",
     "capacity": 90,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1594744163,
@@ -1055,13 +1024,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 107,
+    "id": "charging",
     "capacity": 350,
     "chargingPointCapacity": 2,
     "disabledAccess": false,
     "minimumHeightInMeters": 1.9,
-    "usage": "Garageparkeren",
-    "class": "charging"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1594640662,
@@ -1088,13 +1056,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 108,
+    "id": "charging",
     "capacity": 414,
     "chargingPointCapacity": 2,
     "disabledAccess": false,
     "minimumHeightInMeters": 1.9,
-    "usage": "Garageparkeren",
-    "class": "charging"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1594640138,
@@ -1121,13 +1088,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 109,
+    "id": "none",
     "capacity": 415,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 1.9,
-    "usage": "Garageparkeren",
-    "class": "none"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1594737121,
@@ -1154,13 +1120,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 110,
+    "id": "charging",
     "capacity": 262,
     "chargingPointCapacity": 4,
     "disabledAccess": false,
     "minimumHeightInMeters": 2.2,
-    "usage": "Garageparkeren",
-    "class": "charging"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1595581649,
@@ -1187,13 +1152,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 111,
+    "id": "none",
     "capacity": 40,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1594645799,
@@ -1220,13 +1184,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 112,
+    "id": "none",
     "capacity": 99,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 1.9,
-    "usage": "Garageparkeren",
-    "class": "none"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1594725419,
@@ -1253,13 +1216,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 113,
+    "id": "none",
     "capacity": 313,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2,
-    "usage": "Terreinparkeren",
-    "class": "none"
+    "usage": "Terreinparkeren"
   },
   {
     "validityStartOfPeriod": 1594646759,
@@ -1286,13 +1248,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 114,
+    "id": "charging",
     "capacity": 886,
     "chargingPointCapacity": 4,
     "disabledAccess": false,
     "minimumHeightInMeters": 2.1,
-    "usage": "Garageparkeren",
-    "class": "charging"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -1319,14 +1280,13 @@
       "country": "Nederland",
       "phoneNumbers": ["14036"]
     },
-    "id": 115,
+    "id": "none",
     "validityEndOfPeriod": null,
     "capacity": 274,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1594974804,
@@ -1353,13 +1313,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 116,
+    "id": "charging",
     "capacity": 230,
     "chargingPointCapacity": 2,
     "disabledAccess": false,
     "minimumHeightInMeters": 2,
-    "usage": "Garageparkeren",
-    "class": "charging"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1594736865,
@@ -1386,13 +1345,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 117,
+    "id": "charging",
     "capacity": 408,
     "chargingPointCapacity": 2,
     "disabledAccess": false,
     "minimumHeightInMeters": 2,
-    "usage": "Garageparkeren",
-    "class": "charging"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -1419,14 +1377,13 @@
       "country": "Nederland",
       "phoneNumbers": ["14036"]
     },
-    "id": 118,
+    "id": "disabled",
     "validityEndOfPeriod": null,
     "capacity": 500,
     "chargingPointCapacity": 0,
     "disabledAccess": true,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "disabled"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -1453,14 +1410,13 @@
       "country": "Nederland",
       "phoneNumbers": ["14036"]
     },
-    "id": 119,
+    "id": "none",
     "validityEndOfPeriod": null,
     "capacity": 150,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1594307655,
@@ -1487,13 +1443,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 120,
+    "id": "charging",
     "capacity": 353,
     "chargingPointCapacity": 2,
     "disabledAccess": false,
     "minimumHeightInMeters": 1.9,
-    "usage": "Garageparkeren",
-    "class": "charging"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -1520,14 +1475,13 @@
       "country": "Nederland",
       "phoneNumbers": ["14036"]
     },
-    "id": 121,
+    "id": "none",
     "validityEndOfPeriod": null,
     "capacity": 265,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -1554,14 +1508,13 @@
       "country": "Nederland",
       "phoneNumbers": ["14036"]
     },
-    "id": 122,
+    "id": "none",
     "validityEndOfPeriod": null,
     "capacity": 100,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1596627498,
@@ -1588,13 +1541,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 123,
+    "id": "charging",
     "capacity": 334,
     "chargingPointCapacity": 2,
     "disabledAccess": false,
     "minimumHeightInMeters": 1.9,
-    "usage": "Garageparkeren",
-    "class": "charging"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1557754146,
@@ -1621,13 +1573,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 124,
+    "id": "charging",
     "capacity": 301,
     "chargingPointCapacity": 2,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Garageparkeren",
-    "class": "charging"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -1654,14 +1605,13 @@
       "country": "Nederland",
       "phoneNumbers": ["14036"]
     },
-    "id": 125,
+    "id": "disabled",
     "validityEndOfPeriod": null,
     "capacity": 345,
     "chargingPointCapacity": 0,
     "disabledAccess": true,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "disabled"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1571410828,
@@ -1688,13 +1638,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 157,
+    "id": "none",
     "capacity": 13,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1570118027,
@@ -1721,13 +1670,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 158,
+    "id": "none",
     "capacity": 28,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1569498219,
@@ -1754,13 +1702,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 160,
+    "id": "none",
     "capacity": 6,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -1787,14 +1734,13 @@
       "country": "Nederland",
       "phoneNumbers": ["140519"]
     },
-    "id": 161,
+    "id": "none",
     "validityEndOfPeriod": null,
     "capacity": 40,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1569254056,
@@ -1821,13 +1767,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 163,
+    "id": "none",
     "capacity": 60,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1573738191,
@@ -1854,13 +1799,12 @@
       "country": "Nederland",
       "phoneNumbers": ["140511"]
     },
-    "id": 170,
+    "id": "none",
     "capacity": 10,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -1887,14 +1831,13 @@
       "country": "Nederland",
       "phoneNumbers": ["140511"]
     },
-    "id": 177,
+    "id": "none",
     "validityEndOfPeriod": null,
     "capacity": 20,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -1921,13 +1864,12 @@
       "country": "Nederland",
       "phoneNumbers": ["0513-617617"]
     },
-    "id": 200,
+    "id": "none",
     "capacity": 40,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -1954,7 +1896,7 @@
       "country": "Nederland",
       "phoneNumbers": ["0513-617617"]
     },
-    "id": 205,
+    "id": "disabled",
     "capacity": 200,
     "chargingPointCapacity": 0,
     "disabledAccess": true,
@@ -1979,8 +1921,7 @@
           [5.913920739, 52.960818569]
         ]
       ]
-    },
-    "class": "disabled"
+    }
   },
   {
     "validityStartOfPeriod": 1569498727,
@@ -2007,13 +1948,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 218,
+    "id": "none",
     "capacity": 7,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -2040,14 +1980,13 @@
       "country": "Nederland",
       "phoneNumbers": ["140591"]
     },
-    "id": 264,
+    "id": "none",
     "validityEndOfPeriod": null,
     "capacity": 12,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1594819334,
@@ -2074,13 +2013,12 @@
       "country": "Nederland",
       "phoneNumbers": ["140591"]
     },
-    "id": 265,
+    "id": "none",
     "capacity": 853,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 1.95,
-    "usage": "Garage Parkeren",
-    "class": "none"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1576057950,
@@ -2107,13 +2045,12 @@
       "country": "Nederland",
       "phoneNumbers": ["140524"]
     },
-    "id": 271,
+    "id": "none",
     "capacity": 24,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1571153736,
@@ -2140,13 +2077,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 342,
+    "id": "none",
     "capacity": 9,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1494324151,
@@ -2173,13 +2109,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 344,
+    "id": "none",
     "capacity": 625,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2,
-    "usage": "Garage parkeren",
-    "class": "none"
+    "usage": "Garage parkeren"
   },
   {
     "validityStartOfPeriod": 1591446779,
@@ -2206,13 +2141,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 346,
+    "id": "none",
     "capacity": 52,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1569515565,
@@ -2239,13 +2173,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 350,
+    "id": "none",
     "capacity": 14,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpool Parkeren",
-    "class": "none"
+    "usage": "Carpool Parkeren"
   },
   {
     "validityStartOfPeriod": 1494324184,
@@ -2272,13 +2205,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 351,
+    "id": "none",
     "capacity": 525,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2.2,
-    "usage": "Garage parkeren",
-    "class": "none"
+    "usage": "Garage parkeren"
   },
   {
     "validityStartOfPeriod": 1573549630,
@@ -2305,13 +2237,12 @@
       "country": "Nederland",
       "phoneNumbers": ["0512-581234"]
     },
-    "id": 352,
+    "id": "none",
     "capacity": 225,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2.1,
-    "usage": "Garageparkeren",
-    "class": "none"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1494324202,
@@ -2338,13 +2269,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 355,
+    "id": "none",
     "capacity": 720,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2.1,
-    "usage": "Garage parkeren",
-    "class": "none"
+    "usage": "Garage parkeren"
   },
   {
     "validityStartOfPeriod": 1570535102,
@@ -2371,13 +2301,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 358,
+    "id": "none",
     "capacity": 6,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1576056562,
@@ -2404,13 +2333,12 @@
       "country": "Nederland",
       "phoneNumbers": ["0592-366911"]
     },
-    "id": 372,
+    "id": "none",
     "capacity": 45,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1589812580,
@@ -2437,13 +2365,12 @@
       "country": "Nederland",
       "phoneNumbers": ["0592-366911"]
     },
-    "id": 382,
+    "id": "none",
     "capacity": 96,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1576056308,
@@ -2470,13 +2397,12 @@
       "country": "Nederland",
       "phoneNumbers": ["0592-366911"]
     },
-    "id": 384,
+    "id": "none",
     "capacity": 78,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1589814159,
@@ -2503,13 +2429,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 401,
+    "id": "none",
     "capacity": 55,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1576058243,
@@ -2536,13 +2461,12 @@
       "country": "Nederland",
       "phoneNumbers": ["140524"]
     },
-    "id": 411,
+    "id": "none",
     "capacity": 71,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1569501477,
@@ -2569,13 +2493,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 416,
+    "id": "none",
     "capacity": 18,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1576766432,
@@ -2602,13 +2525,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 428,
+    "id": "none",
     "capacity": 70,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Terrein Parkeren",
-    "class": "none"
+    "usage": "Terrein Parkeren"
   },
   {
     "validityStartOfPeriod": 1571152743,
@@ -2635,13 +2557,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 461,
+    "id": "none",
     "capacity": 41,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1494324125,
@@ -2668,13 +2589,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 462,
+    "id": "none",
     "capacity": 390,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2.1,
-    "usage": "Garage parkeren",
-    "class": "none"
+    "usage": "Garage parkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -2701,14 +2621,13 @@
       "country": "Nederland",
       "phoneNumbers": ["140591"]
     },
-    "id": 484,
+    "id": "none",
     "validityEndOfPeriod": null,
     "capacity": 34,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1576766447,
@@ -2735,13 +2654,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 513,
+    "id": "none",
     "capacity": 182,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Terrein Parkeren",
-    "class": "none"
+    "usage": "Terrein Parkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -2768,13 +2686,12 @@
       "country": "Nederland",
       "phoneNumbers": ["0517-380380"]
     },
-    "id": 517,
+    "id": "none",
     "capacity": 20,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -2801,13 +2718,12 @@
       "country": "Nederland",
       "phoneNumbers": ["0513-617617"]
     },
-    "id": 527,
+    "id": "none",
     "capacity": 40,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -2834,13 +2750,12 @@
       "country": "Nederland",
       "phoneNumbers": ["0513-617617"]
     },
-    "id": 539,
+    "id": "none",
     "capacity": 20,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -2867,13 +2782,12 @@
       "country": "Nederland",
       "phoneNumbers": ["0513-617617"]
     },
-    "id": 540,
+    "id": "none",
     "capacity": 20,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -2900,13 +2814,12 @@
       "country": "Nederland",
       "phoneNumbers": ["0517-380380"]
     },
-    "id": 541,
+    "id": "none",
     "capacity": 54,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1594801707,
@@ -2933,13 +2846,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 560,
+    "id": "none",
     "capacity": 89,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2.1,
-    "usage": "Garage Parkeren",
-    "class": "none"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -2966,14 +2878,13 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 562,
+    "id": "none",
     "validityEndOfPeriod": null,
     "capacity": 42,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1576758942,
@@ -3000,13 +2911,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 563,
+    "id": "none",
     "capacity": 72,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2.1,
-    "usage": "Garage Parkeren",
-    "class": "none"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1498216934,
@@ -3033,13 +2943,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 565,
+    "id": "none",
     "capacity": 97,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1573549185,
@@ -3066,13 +2975,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 566,
+    "id": "none",
     "capacity": 22,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1498212644,
@@ -3099,13 +3007,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 573,
+    "id": "none",
     "capacity": 25,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1452159752,
@@ -3132,12 +3039,11 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 576,
+    "id": "charging",
     "chargingPointCapacity": 4,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Garageparkeren",
-    "class": "charging"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1425168000,
@@ -3164,14 +3070,13 @@
       "country": "Nederland",
       "phoneNumbers": ["140591"]
     },
-    "id": 582,
+    "id": "both",
     "validityEndOfPeriod": null,
     "capacity": 460,
     "chargingPointCapacity": 1,
     "disabledAccess": true,
     "minimumHeightInMeters": 2.2,
-    "usage": "Garage Parkeren",
-    "class": "both"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1497346341,
@@ -3198,13 +3103,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 611,
+    "id": "none",
     "capacity": 335,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2,
-    "usage": "BetaaldParkeren",
-    "class": "none"
+    "usage": "BetaaldParkeren"
   },
   {
     "validityStartOfPeriod": 1573636169,
@@ -3231,13 +3135,12 @@
       "country": "Nederland",
       "phoneNumbers": ["140511"]
     },
-    "id": 613,
+    "id": "none",
     "capacity": 119,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1496935376,
@@ -3264,13 +3167,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 614,
+    "id": "none",
     "capacity": 6,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Parkeren",
-    "class": "none"
+    "usage": "Parkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -3297,13 +3199,12 @@
       "country": "Nederland",
       "phoneNumbers": ["0513-617617"]
     },
-    "id": 625,
+    "id": "none",
     "capacity": 140,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1496930232,
@@ -3330,13 +3231,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 634,
+    "id": "none",
     "capacity": 125,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2,
-    "usage": "Garage Parkeren",
-    "class": "none"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1576757879,
@@ -3363,13 +3263,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 638,
+    "id": "none",
     "capacity": 101,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2.1,
-    "usage": "Garage Parkeren",
-    "class": "none"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1509637231,
@@ -3396,13 +3295,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 639,
+    "id": "none",
     "capacity": 345,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2.1,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1576755654,
@@ -3429,13 +3327,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 640,
+    "id": "none",
     "capacity": 176,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2.1,
-    "usage": "Garage Parkeren",
-    "class": "none"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1510057164,
@@ -3462,13 +3359,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 653,
+    "id": "disabled",
     "capacity": 80,
     "chargingPointCapacity": 0,
     "disabledAccess": true,
     "minimumHeightInMeters": 2.1,
-    "usage": "Garage Parkeren",
-    "class": "disabled"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1591446343,
@@ -3495,13 +3391,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 654,
+    "id": "none",
     "capacity": 35,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1576756998,
@@ -3528,13 +3423,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 657,
+    "id": "none",
     "capacity": 269,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2,
-    "usage": "Garage Parkeren",
-    "class": "none"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1499851356,
@@ -3561,13 +3455,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 660,
+    "id": "none",
     "capacity": 225,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 3.8,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1497347475,
@@ -3594,13 +3487,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 661,
+    "id": "none",
     "capacity": 1700,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2.1,
-    "usage": "Garage Parkeren",
-    "class": "none"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1571305329,
@@ -3627,13 +3519,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 663,
+    "id": "none",
     "capacity": 40,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1497351334,
@@ -3688,13 +3579,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 670,
+    "id": "none",
     "capacity": 20,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -3721,14 +3611,13 @@
       "country": "Nederland",
       "phoneNumbers": ["140591"]
     },
-    "id": 675,
+    "id": "none",
     "validityEndOfPeriod": null,
     "capacity": 32,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1576057270,
@@ -3755,13 +3644,12 @@
       "country": "Nederland",
       "phoneNumbers": ["140524"]
     },
-    "id": 676,
+    "id": "none",
     "capacity": 10,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1576766610,
@@ -3788,13 +3676,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 689,
+    "id": "none",
     "capacity": 300,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2.1,
-    "usage": "Garage Parkeren",
-    "class": "none"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1459866213,
@@ -3821,7 +3708,7 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 700,
+    "id": "none",
     "capacity": 180,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
@@ -3839,8 +3726,7 @@
           [6.478467258, 52.730736864]
         ]
       ]
-    },
-    "class": "none"
+    }
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -3867,13 +3753,12 @@
       "country": "Nederland",
       "phoneNumbers": ["140523"]
     },
-    "id": 714,
+    "id": "none",
     "capacity": 16,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1576758277,
@@ -3900,13 +3785,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 741,
+    "id": "none",
     "capacity": 373,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2.1,
-    "usage": "Garage Parkeren",
-    "class": "none"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1505391450,
@@ -3933,13 +3817,12 @@
       "country": "Nederland",
       "phoneNumbers": ["0529-488388"]
     },
-    "id": 753,
+    "id": "none",
     "capacity": 180,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Parkeren",
-    "class": "none"
+    "usage": "Parkeren"
   },
   {
     "validityStartOfPeriod": 1589814042,
@@ -3966,13 +3849,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 760,
+    "id": "none",
     "capacity": 16,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1576754691,
@@ -3999,13 +3881,12 @@
       "country": "Nederland",
       "phoneNumbers": ["053-5734567"]
     },
-    "id": 782,
+    "id": "none",
     "capacity": 10,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1425168000,
@@ -4032,14 +3913,13 @@
       "country": "Nederland",
       "phoneNumbers": ["140523"]
     },
-    "id": 787,
+    "id": "disabled",
     "validityEndOfPeriod": null,
     "capacity": 274,
     "chargingPointCapacity": 0,
     "disabledAccess": true,
     "minimumHeightInMeters": 2.1,
-    "usage": "Garageparkeren",
-    "class": "disabled"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -4066,13 +3946,12 @@
       "country": "Nederland",
       "phoneNumbers": ["140523"]
     },
-    "id": 790,
+    "id": "none",
     "capacity": 12,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -4099,13 +3978,12 @@
       "country": "Nederland",
       "phoneNumbers": ["140523"]
     },
-    "id": 792,
+    "id": "none",
     "capacity": 25,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1425168000,
@@ -4132,14 +4010,13 @@
       "country": "Nederland",
       "phoneNumbers": ["140523"]
     },
-    "id": 799,
+    "id": "disabled",
     "validityEndOfPeriod": null,
     "capacity": 257,
     "chargingPointCapacity": 0,
     "disabledAccess": true,
     "minimumHeightInMeters": 0,
-    "usage": "Terreinparkeren",
-    "class": "disabled"
+    "usage": "Terreinparkeren"
   },
   {
     "validityStartOfPeriod": 1569498904,
@@ -4166,13 +4043,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 801,
+    "id": "none",
     "capacity": 16,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpool Parkeren",
-    "class": "none"
+    "usage": "Carpool Parkeren"
   },
   {
     "validityStartOfPeriod": 1576753950,
@@ -4199,13 +4075,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 810,
+    "id": "none",
     "capacity": 8,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1576758854,
@@ -4232,13 +4107,12 @@
       "country": "Nederland",
       "phoneNumbers": ["0529-488388"]
     },
-    "id": 821,
+    "id": "none",
     "capacity": 7,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1505391565,
@@ -4255,13 +4129,12 @@
         "longitude": 6.259533
       }
     ],
-    "id": 822,
+    "id": "none",
     "capacity": 5,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Parkeren",
-    "class": "none"
+    "usage": "Parkeren"
   },
   {
     "validityStartOfPeriod": 1576753242,
@@ -4288,13 +4161,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 823,
+    "id": "none",
     "capacity": 147,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2.1,
-    "usage": "Garage Parkeren",
-    "class": "none"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1576753531,
@@ -4321,13 +4193,12 @@
       "country": "Nederland",
       "phoneNumbers": ["0529-488388"]
     },
-    "id": 826,
+    "id": "none",
     "capacity": 16,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1497349894,
@@ -4354,13 +4225,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 827,
+    "id": "none",
     "capacity": 335,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2,
-    "usage": "Garage Parkeren",
-    "class": "none"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1512648063,
@@ -4393,13 +4263,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 863,
+    "id": "none",
     "capacity": 26,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpool Parkeren",
-    "class": "none"
+    "usage": "Carpool Parkeren"
   },
   {
     "validityStartOfPeriod": 1570534973,
@@ -4426,13 +4295,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 872,
+    "id": "none",
     "capacity": 84,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1498141806,
@@ -4459,13 +4327,12 @@
       "country": "Nederland",
       "phoneNumbers": ["074-2459876"]
     },
-    "id": 880,
+    "id": "none",
     "capacity": 47,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1504540751,
@@ -4492,13 +4359,12 @@
       "country": "Nederland",
       "phoneNumbers": ["14038"]
     },
-    "id": 882,
+    "id": "none",
     "capacity": 35,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpool parkeren",
-    "class": "none"
+    "usage": "Carpool parkeren"
   },
   {
     "validityStartOfPeriod": 1596639775,
@@ -4525,13 +4391,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 888,
+    "id": "charging",
     "capacity": 204,
     "chargingPointCapacity": 8,
     "disabledAccess": false,
     "minimumHeightInMeters": 2,
-    "usage": "Garage Parkeren",
-    "class": "charging"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1594646219,
@@ -4558,13 +4423,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 890,
+    "id": "none",
     "capacity": 611,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 1.9,
-    "usage": "Garage Parkeren",
-    "class": "none"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1591628413,
@@ -4591,13 +4455,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 895,
+    "id": "none",
     "capacity": 89,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 1.9,
-    "usage": "Garage Parkeren",
-    "class": "none"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1595936900,
@@ -4624,13 +4487,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 896,
+    "id": "none",
     "capacity": 100,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2.1,
-    "usage": "Garage Parkeren",
-    "class": "none"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1497349680,
@@ -4657,13 +4519,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 898,
+    "id": "none",
     "capacity": 525,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 2,
-    "usage": "Garage Parkeren",
-    "class": "none"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1596639908,
@@ -4690,13 +4551,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 901,
+    "id": "charging",
     "capacity": 700,
     "chargingPointCapacity": 30,
     "disabledAccess": false,
     "minimumHeightInMeters": 2.1,
-    "usage": "Garage Parkeren",
-    "class": "charging"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1597071579,
@@ -4723,13 +4583,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 909,
+    "id": "both",
     "capacity": 293,
     "chargingPointCapacity": 4,
     "disabledAccess": true,
     "minimumHeightInMeters": 2,
-    "usage": "Garage Parkeren",
-    "class": "both"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1594638101,
@@ -4756,13 +4615,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 915,
+    "id": "charging",
     "capacity": 190,
     "chargingPointCapacity": 2,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Terrein Parkeren",
-    "class": "charging"
+    "usage": "Terrein Parkeren"
   },
   {
     "validityStartOfPeriod": 1576753155,
@@ -4789,13 +4647,12 @@
       "country": "Nederland",
       "phoneNumbers": ["038-3392999"]
     },
-    "id": 930,
+    "id": "none",
     "capacity": 170,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1576756318,
@@ -4822,13 +4679,12 @@
       "country": "Nederland",
       "phoneNumbers": ["038-3392999"]
     },
-    "id": 935,
+    "id": "none",
     "capacity": 182,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Park & Ride",
-    "class": "none"
+    "usage": "Park & Ride"
   },
   {
     "validityStartOfPeriod": 1425168000,
@@ -4855,14 +4711,13 @@
       "country": "Nederland",
       "phoneNumbers": ["140523"]
     },
-    "id": 968,
+    "id": "both",
     "validityEndOfPeriod": null,
     "capacity": 459,
     "chargingPointCapacity": 4,
     "disabledAccess": true,
     "minimumHeightInMeters": 2,
-    "usage": "Garageparkeren",
-    "class": "both"
+    "usage": "Garageparkeren"
   },
   {
     "validityStartOfPeriod": 1433116800,
@@ -4889,14 +4744,13 @@
       "country": "Nederland",
       "phoneNumbers": ["074-2459876"]
     },
-    "id": 983,
+    "id": "none",
     "validityEndOfPeriod": null,
     "capacity": 20,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1470745699,
@@ -4923,13 +4777,12 @@
       "country": "Nederland",
       "phoneNumbers": [""]
     },
-    "id": 990,
+    "id": "both",
     "capacity": 500,
     "chargingPointCapacity": 8,
     "disabledAccess": true,
     "minimumHeightInMeters": 2,
-    "usage": "Parkeren",
-    "class": "both"
+    "usage": "Parkeren"
   },
   {
     "validityStartOfPeriod": 1501593990,
@@ -4946,13 +4799,12 @@
         "longitude": 6.015765
       }
     ],
-    "id": 991,
+    "id": "none",
     "capacity": 80,
     "chargingPointCapacity": 0,
     "disabledAccess": false,
     "minimumHeightInMeters": 0,
-    "usage": "Carpoolparkeren",
-    "class": "none"
+    "usage": "Carpoolparkeren"
   },
   {
     "validityStartOfPeriod": 1596639716,
@@ -4979,13 +4831,12 @@
       "country": "",
       "phoneNumbers": [""]
     },
-    "id": 992,
+    "id": "charging",
     "capacity": 100,
     "chargingPointCapacity": 2,
     "disabledAccess": false,
     "minimumHeightInMeters": 2,
-    "usage": "Garage Parkeren",
-    "class": "charging"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1469708431,
@@ -5002,13 +4853,12 @@
         "longitude": 5.963628
       }
     ],
-    "id": 997,
+    "id": "disabled",
     "capacity": 700,
     "chargingPointCapacity": 0,
     "disabledAccess": true,
     "minimumHeightInMeters": 2,
-    "usage": "Garage Parkeren",
-    "class": "disabled"
+    "usage": "Garage Parkeren"
   },
   {
     "validityStartOfPeriod": 1470745654,
@@ -5025,12 +4875,11 @@
         "longitude": 5.951676
       }
     ],
-    "id": 999,
+    "id": "disabled",
     "capacity": 450,
     "chargingPointCapacity": 0,
     "disabledAccess": true,
     "minimumHeightInMeters": 1.9,
-    "usage": "Garage Parkeren",
-    "class": "disabled"
+    "usage": "Garage Parkeren"
   }
 ]
