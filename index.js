@@ -77,32 +77,37 @@ getData(endpoint).then(RDWData => {
     }
   })
 
-  console.log("volledige JSON: ", combineJSON)
+  // console.log("volledige JSON: ", combineJSON)
+
+  //and than as last we filter out the not usable parking spots
+  const filterUselessData = filterData(combineJSON)
+  console.log(filterUselessData)
 
 })
 
+function filterData(data){
+  return data.filter(result => result.accessPointLocation);
+}
 
 
 function addObjectUndef(data){
-  const undefinedData = data.map(result => {
+  return data.map(result => {
     if(result == undefined){
       return result = {}
     }else{
       return result
     }
   })
-return undefinedData
 }
 
 function addIds(data){
-  const idAdd = data.map((item, index) => {
+  return data.map((item, index) => {
     if(index !== undefined){
       return {...item, id: index + 1}
     }else{
       return {id: index + 1}
     }
   })
-return idAdd
 }
 
 
