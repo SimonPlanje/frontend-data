@@ -65,7 +65,7 @@ const combineJSON = addIdToLonLat.map((item) => {
   }
 })
 
-  // console.log("volledige JSON: ", combineJSON)
+  // console.log('volledige JSON: ', combineJSON)
 
   //and than as last we filter out the not usable parking spots
   const filterUselessData = filterData(combineJSON)
@@ -229,8 +229,8 @@ const height = parseFloat(svg.attr('height'));
 const width = +svg.attr('width');
 
 const projection = d3.geoMercator()
-.center([6, 52])                // GPS of location to zoom on
-.scale(5000)                    // This is like the zoom
+.center([5, 53])                // GPS of location to zoom on
+.scale(7000)                    // This is like the zoom
 const pathGenerator = d3.geoPath().projection(projection)
 //geoPath: this will convert the data path into an svg path string that we can use on svg paths
 //geoMercator: this is the type of projection type
@@ -239,18 +239,18 @@ const g = svg.append('g')
 var radius = '2px'
 //Bepaal kleur voor circles
 var color = d3.scaleOrdinal()
-    .domain(['none', 'all', 'disabled', 'charging'])
-    .range(['red', 'pink', 'purple', 'lime'])
+    .domain(['none', 'both', 'disabled', 'charging'])
+    .range(['pink', 'red', 'purple', 'lime'])
 
 
 //source: https://www.d3-graph-gallery.com/graph/bubblemap_buttonControl.html
 
 //ZOOMEN 
 svg.call(d3.zoom()
-  .on("zoom", zoomed));
+  .on('zoom', zoomed));
 
 function zoomed({transform}) {
-g.attr("transform", transform);
+g.attr('transform', transform);
 }
 
 g.append('path')
@@ -286,35 +286,46 @@ d3.json('https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/online
     .attr('cy', d => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[1])
     .attr('r', radius)
     .attr('fill', function(d){ return color(d.id)})
-    .attr('fill', function(d){ return color(d.id)})
-    .attr("fill-opacity", .8)
+    .attr('stroke', function(d){ return color(d.id)})
+    .attr('fill-opacity', .3)
     //gebruik de color variable om de true en false disabled access een verschillende kleur te geven.
+
+//legend
+    svg.append('circle').attr('cx',80).attr('cy',100).attr('r', 6).attr('fill', 'red').attr('stroke', 'red').attr('fill-opacity', '.4')
+    svg.append('circle').attr('cx',80).attr('cy',130).attr('r', 6).attr('fill', 'lime').attr('stroke', 'lime').attr('fill-opacity', '.4')
+    svg.append('circle').attr('cx',80).attr('cy',160).attr('r', 6).attr('fill', 'purple').attr('stroke', 'purple').attr('fill-opacity', '.4')
+    svg.append('circle').attr('cx',80).attr('cy',190).attr('r', 6).attr('fill', 'pink').attr('stroke', 'pink').attr('fill-opacity', '.4')
+    svg.append('text').attr('x', 100).attr('y', 100).text('Opladen + invaliden').attr('fill', 'white').style('font-size', '15px').attr('alignment-baseline','middle')
+    svg.append('text').attr('x', 100).attr('y', 130).text('Alleen opladen').attr('fill', 'white').style('font-size', '15px').attr('alignment-baseline','middle')
+    svg.append('text').attr('x', 100).attr('y', 160).text('Alleen invaliden').attr('fill', 'white').style('font-size', '15px').attr('alignment-baseline','middle')
+    svg.append('text').attr('x', 100).attr('y', 190).text('Geen invaliden en oplaadpunt').attr('fill', 'white').style('font-size', '15px').attr('alignment-baseline','middle')
+
 
  // This function is gonna change the opacity and size of selected and unselected circles
  function update(){
 
   // For each check box:
-  d3.selectAll(".checkbox").each(function(d){
+  d3.selectAll('.checkbox').each(function(d){
     cb = d3.select(this);
-    group = cb.property("value")
+    group = cb.property('value')
 
     console.log(d3.selectAll('.disabled'))
 
     // If the box is check, I show the group
-    if(cb.property("checked")){
-      g.selectAll("."+group)
+    if(cb.property('checked')){
+      g.selectAll('.'+group)
       .transition()
       .duration(1000)
-      .style("opacity", 1)
+      .style('opacity', 1)
       .attr('r', radius)
 
     // Otherwise I hide it
     }else{
-      g.selectAll("."+group)
+      g.selectAll('.'+group)
       .transition()
       .duration(1000)
-      .style("opacity", 0)
-      .attr("r", 0)
+      .style('opacity', 0)
+      .attr('r', 0)
     }
   })
 }
@@ -323,5 +334,9 @@ d3.selectAll('.checkbox').on('change', update)
 update()
 
 
+
     })
+
+
+
 

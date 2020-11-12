@@ -5,9 +5,44 @@
 .gemeente {
   fill: transparent;
   stroke: cyan;
-  stroke-width: 0.5px;
+  stroke-width: 0.2px;
 }
 
 .gemeente:hover {
   fill: orange;
+}
+
+form {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  text-align: center;
+}
+
+label {
+  background-color: rgb(22, 115, 207);
+  color: white;
+  padding: 2em;
+  border-radius: 5em 5em 5em 5em;
+  margin: 1em;
+  font-weight: bold;
+}
+
+label:hover {
+  background-color: darkslategray;
+}
+
+main {
+  display: flex;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  background: #00010a;
+}
+
+input[class="checkbox"]:checked + label {
+  background-color: pink;
+  color: red;
 }
