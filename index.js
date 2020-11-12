@@ -81,7 +81,7 @@ const combineJSON = addIdToLonLat.map((item) => {
 
   //and than as last we filter out the not usable parking spots
   const filterUselessData = filterData(combineJSON)
-  // console.log(JSON.stringify(filterUselessData))
+  console.log(filterUselessData)
 
 })
 
@@ -189,7 +189,11 @@ const pathGenerator = d3.geoPath().projection(projection)
 
 const g = svg.append('g')
 
-
+//Bepaal kleur voor circles
+var color = d3.scaleOrdinal()
+    .domain([true, false ])
+    .range(['red', 'blue'])
+//source: https://www.d3-graph-gallery.com/graph/bubblemap_buttonControl.html
 
 //ZOOMEN 
 svg.call(d3.zoom()
@@ -231,6 +235,8 @@ d3.json('https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/online
     .attr('cx', d => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[0])
     .attr('cy', d => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[1])
     .attr('r', '2px')
+    .attr('fill', function(d){ return color(d.disabledAccess)})
+    
     })
 
 
