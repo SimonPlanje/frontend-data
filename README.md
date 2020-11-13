@@ -2,7 +2,7 @@
 
 **functional-programming en frontend data 20/21**  
 **Auteur:** _Simon Planje_  
-[🔴 ive gh-pages](https://simonplanje.github.io/frontend-data/)
+[🔴 live gh-pages](https://simonplanje.github.io/frontend-data/)
 
 ![eindresultaat](images/endresultFD.PNG)
 
