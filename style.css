@@ -12,7 +12,7 @@
 .gemeente {
   fill: transparent;
   stroke: var(--light);
-  stroke-width: 0.2px;
+  stroke-width: 0.3px;
 }
 
 .gemeente:hover {
