@@ -252,6 +252,8 @@ svg.call(d3.zoom()
 function zoomed({transform}) {
 g.attr('transform', transform);
 }
+//source: https://www.youtube.com/watch?v=9ZB1EgaJnBU&t=904s
+
 
 g.append('path')
 .attr('class', 'sphere')
@@ -289,6 +291,7 @@ d3.json('https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/online
     .attr('stroke', d => color(d.id))
     .attr('fill-opacity', .3)
     //update function for the checkboxes
+
 function update(){
   // For each check box:
   d3.selectAll('.checkbox').each(function(d){

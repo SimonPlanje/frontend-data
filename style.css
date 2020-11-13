@@ -1,15 +1,26 @@
+:root {
+  --dark: #252626;
+  --light: #01cec2;
+  --white: #ffffff;
+  --pink: #fc3f79;
+}
+
 .sphere {
-  fill: #00010a;
+  fill: var(--dark);
 }
 
 .gemeente {
   fill: transparent;
-  stroke: cyan;
+  stroke: var(--light);
   stroke-width: 0.2px;
 }
 
 .gemeente:hover {
-  fill: orange;
+  fill: var(--pink);
+}
+
+h1 {
+  margin: 2em;
 }
 
 form {
@@ -20,7 +31,7 @@ form {
 }
 
 label {
-  background-color: rgb(22, 115, 207);
+  background-color: var(--light);
   color: white;
   padding: 2em;
   border-radius: 5em 5em 5em 5em;
@@ -29,7 +40,7 @@ label {
 }
 
 label:hover {
-  background-color: darkslategray;
+  background-color: var(--light);
 }
 
 main {
@@ -39,10 +50,5 @@ main {
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
-  background: #00010a;
-}
-
-input[class="checkbox"]:checked + label {
-  background-color: pink;
-  color: red;
+  background: var(--dark);
 }
