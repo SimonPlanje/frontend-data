@@ -1,5 +1,9 @@
 # frontend-data
 
+functional-programming en frontend data 20/21
+Auteur: Simon Planje
+[🔴live ghpages](https://simonplanje.github.io/frontend-data/)
+
 ## Volkskrant RDW data
 
 ### Onderzoeksvraag
