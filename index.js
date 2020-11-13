@@ -288,43 +288,8 @@ d3.json('https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/online
     .attr('fill', d => color(d.id))
     .attr('stroke', d => color(d.id))
     .attr('fill-opacity', .3)
-    //gebruik de color variable om de true en false disabled access een verschillende kleur te geven.
-
-//legend
-svg.selectAll('g')
-  .data(color.domain())
-  .enter().append('circle')
-    .attr('transform', (d, i) =>
-        `translate(${100},${i * 30 + 20})`)
-    .attr('r', 6)
-    .attr('fill', d => color(d))
-
-
-svg.selectAll('g')
-  .data(color.domain())
-  .enter()
-  .append('text')
-    .text(d => d)
-    .style('fill', 'white')
-    .attr('transform', (d, i) =>
-    `translate(${100},${i * 30 + 20})`)
-
-
-
-
-//     svg.append('circle').attr('cx',80).attr('cy',100).attr('r', 6).attr('fill', 'red').attr('stroke', 'red').attr('fill-opacity', '.4')
-//     svg.append('circle').attr('cx',80).attr('cy',130).attr('r', 6).attr('fill', 'lime').attr('stroke', 'lime').attr('fill-opacity', '.4')
-//     svg.append('circle').attr('cx',80).attr('cy',160).attr('r', 6).attr('fill', 'purple').attr('stroke', 'purple').attr('fill-opacity', '.4')
-//     svg.append('circle').attr('cx',80).attr('cy',190).attr('r', 6).attr('fill', 'pink').attr('stroke', 'pink').attr('fill-opacity', '.4')
-//     svg.append('text').attr('x', 100).attr('y', 100).text('Opladen + invaliden').attr('fill', 'white').style('font-size', '15px').attr('alignment-baseline','middle')
-//     svg.append('text').attr('x', 100).attr('y', 130).text('Alleen opladen').attr('fill', 'white').style('font-size', '15px').attr('alignment-baseline','middle')
-//     svg.append('text').attr('x', 100).attr('y', 160).text('Alleen invaliden').attr('fill', 'white').style('font-size', '15px').attr('alignment-baseline','middle')
-//     svg.append('text').attr('x', 100).attr('y', 190).text('Geen invaliden en oplaadpunt').attr('fill', 'white').style('font-size', '15px').attr('alignment-baseline','middle')
-// //UGLY STATIC LEGEND INSPIRED BY: http://bl.ocks.org/ZJONSSON/3918369
-
- // This function is gonna change the opacity and size of selected and unselected circles
- function update(){
-
+    //update function for the checkboxes
+function update(){
   // For each check box:
   d3.selectAll('.checkbox').each(function(d){
     cb = d3.select(this);
@@ -348,9 +313,35 @@ svg.selectAll('g')
     }
   })
 }
+
 d3.selectAll('.checkbox').on('change', update)
 
 update()
+
+
+//legend
+svg.selectAll('svg')
+  .data(color.domain())
+  .enter().append('circle')
+    .attr('transform', (d, i) =>
+        `translate(${100},${i * 30 + 20})`)
+    .attr('r', 6)
+    .attr('fill', d => color(d))
+    .attr('stroke', d => color(d))
+    .attr('fill-opacity', .3)
+
+svg.selectAll('svg')
+  .data(color.domain())
+  .enter()
+  .append('text')
+    .text(d => d)
+    .style('fill', 'white')
+    .attr('alignment-baseline','middle')
+    .attr('transform', (d, i) =>
+    `translate(${120},${i * 30 + 20})`)
+
+
+
 
 
 
