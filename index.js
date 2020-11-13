@@ -19,7 +19,7 @@ var radius = '2px'
 //Bepaal kleur voor circles
 var color = d3.scaleOrdinal()
     .domain(['none', 'both', 'disabled', 'charging'])
-    .range(['pink', 'red', 'purple', 'lime'])
+    .range(['var(--pink2)', 'var(--yellow)', 'var(--orange)', 'var(--lime)'])
 
 
 //source: https://www.d3-graph-gallery.com/graph/bubblemap_buttonControl.html
@@ -81,7 +81,7 @@ function update(){
     if(cb.property('checked')){
       g.selectAll('.'+group)
       .transition()
-      .duration(1000)
+      .duration(500)
       .style('opacity', 1)
       .attr('r', radius)
 
@@ -89,7 +89,7 @@ function update(){
     }else{
       g.selectAll('.'+group)
       .transition()
-      .duration(1000)
+      .duration(500)
       .style('opacity', 0)
       .attr('r', 0)
     }
@@ -99,6 +99,9 @@ function update(){
 d3.selectAll('.checkbox').on('change', update)
 
 update()
+
+
+    })
 
 
 //legend
@@ -121,14 +124,3 @@ svg.selectAll('svg')
     .attr('alignment-baseline','middle')
     .attr('transform', (d, i) =>
     `translate(${120},${i * 30 + 20})`)
-
-
-
-
-
-
-    })
-
-
-    
-

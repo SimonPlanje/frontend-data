@@ -3,6 +3,13 @@
   --light: #01cec2;
   --white: #ffffff;
   --pink: #fc3f79;
+
+  /* for the parkingspots */
+
+  --yellow: #ffff00;
+  --pink2: #ff0080;
+  --orange: #ff8000;
+  --lime: #80ff00;
 }
 
 .sphere {
