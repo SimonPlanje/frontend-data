@@ -18,12 +18,10 @@ const pathGenerator = d3.geoPath().projection(projection)
 
 const g = svg.append('g')
 var radius = '2px'
-//Bepaal kleur voor circles
-var color = d3
-  .scaleOrdinal()
-  .domain(['none', 'both', 'disabled', 'charging'])
-  .range(['var(--pink2)', 'var(--yellow)', 'var(--orange)', 'var(--lime)'])
 
+
+//Bepaal kleur voor circles
+var color = d3.scaleOrdinal(d3.schemeSpectral[4])
 //source: https://www.d3-graph-gallery.com/graph/bubblemap_buttonControl.html
 
 //ZOOMEN
@@ -52,66 +50,58 @@ d3.json('https://cartomap.github.io/nl/wgs84/gemeente_2020.topojson').then(
       .text((d) => d.properties.statnaam)
   }
 )
-
 //----PLOTTING THE LON LAT AS CIRCLES ON THE MAP ⬇️⬇️⬇️------
 d3.json(
   'https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/onlineData/longLatDisabled.json'
-).then((data) => {
-  g.selectAll('circle')
-    .data(data)
-    .enter()
-    .append('circle')
-    .attr('class', (d) => d.id)
-    .attr(
-      'cx',
-      (d) =>
-        projection([
-          d.accessPointLocation[0].longitude,
-          d.accessPointLocation[0].latitude,
-        ])[0]
-    )
-    .attr(
-      'cy',
-      (d) =>
-        projection([
-          d.accessPointLocation[0].longitude,
-          d.accessPointLocation[0].latitude,
-        ])[1]
-    )
-    .attr('r', radius)
-    .attr('fill', (d) => color(d.id))
-    .attr('stroke', (d) => color(d.id))
-    .attr('fill-opacity', 0.3)
+).then(data => {
+
+
+console.log(data)
+color.domain(data.map(d => d.id))
+
+console.log(color.domain())
+
+
+g.selectAll('circle').data(data)
+  .enter()
+  .append('circle')
+  .attr('class', (d) => d.id)
+  .attr(
+    'cx',
+    (d) =>
+      projection([
+        d.accessPointLocation[0].longitude,
+        d.accessPointLocation[0].latitude,
+      ])[0]
+  )
+  .attr(
+    'cy',
+    (d) =>
+      projection([
+        d.accessPointLocation[0].longitude,
+        d.accessPointLocation[0].latitude,
+      ])[1]
+  )
+  .attr('r', radius)
+  .attr('fill', (d) => color(d.id))
+  .attr('stroke', (d) => color(d.id))
+  .attr('fill-opacity', 0.3)
+  
+
+g.selectAll('circle').data(data).exit().remove()
+  // d3.selectAll('.checkbox').on('change', update)
+  // update()
+
+
+    })
+
+
+
+
   //update function for the checkboxes
 
-  function update() {
-    // For each check box:
-    d3.selectAll('.checkbox').each(function (d) {
-      cb = d3.select(this)
-      group = cb.property('value')
 
-      // If the box is check, I show the group
-      if (cb.property('checked')) {
-        g.selectAll('.' + group)
-          .transition()
-          .duration(500)
-          .style('opacity', 1)
-          .attr('r', radius)
 
-        // Otherwise I hide it
-      } else {
-        g.selectAll('.' + group)
-          .transition()
-          .duration(500)
-          .style('opacity', 0)
-          .attr('r', radius)
-      }
-    })
-  }
-  d3.selectAll('.checkbox').on('change', update)
-
-  update()
-})
 
 //legend
 svg
