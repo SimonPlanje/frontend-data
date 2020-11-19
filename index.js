@@ -50,55 +50,96 @@ d3.json('https://cartomap.github.io/nl/wgs84/gemeente_2020.topojson').then(
       .text((d) => d.properties.statnaam)
   }
 )
+
+
+
+
 //----PLOTTING THE LON LAT AS CIRCLES ON THE MAP ⬇️⬇️⬇️------
 d3.json(
   'https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/onlineData/longLatDisabled.json'
 ).then(data => {
 
-
-console.log(data)
-color.domain(data.map(d => d.id))
-
-console.log(color.domain())
-
+  color.domain(data.map(d => d.id))
+  let idInput = color.domain()
 
 g.selectAll('circle').data(data)
   .enter()
   .append('circle')
   .attr('class', (d) => d.id)
-  .attr(
-    'cx',
-    (d) =>
-      projection([
-        d.accessPointLocation[0].longitude,
-        d.accessPointLocation[0].latitude,
-      ])[0]
-  )
-  .attr(
-    'cy',
-    (d) =>
-      projection([
-        d.accessPointLocation[0].longitude,
-        d.accessPointLocation[0].latitude,
-      ])[1]
-  )
+  .attr('cx', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[0])
+  .attr('cy', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[1])
   .attr('r', radius)
   .attr('fill', (d) => color(d.id))
   .attr('stroke', (d) => color(d.id))
   .attr('fill-opacity', 0.3)
+
+
+
+  function updateDots(data) {
+    const dots = g.selectAll('circle')
+                     .data(data)
+
+    dots 
+    .attr('cx', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[0])
+    .attr('cy', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[1])
   
+    dots.enter()
+        .append('circle')
+        .attr('r', 4)
+        .attr('fill', (d) => color(d.id))
+        .attr('stroke', (d) => color(d.id))
+        .attr('fill-opacity', 0.3)
+        .attr('r', radius)
+        .attr('cx', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[0])
+        .attr('cy', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[1])
 
-g.selectAll('circle').data(data).exit().remove()
-  // d3.selectAll('.checkbox').on('change', update)
-  // update()
+
+    dots.exit()
+          .remove()
+    }
 
 
+ // Make a div inside form element for all payment methods
+ const form = d3.select('form')
+ .selectAll('div')
+ .data(idInput)
+ .enter()
+ .append('div')
+ .attr('class', 'checkBox')
+
+
+  // Make radiobuttons inside the input form
+  form.append('input')
+    .attr('type', 'radio')
+    .attr('name', 'radio')
+    .attr('id', (d,i) => idInput[i])
+    .on('change', (d, i) => {
+      if(i == 'disabled'){
+        i = ['disabled', 'both']
+      } else if(i == 'charging'){
+       i = ['charging','both']
+      }
+      console.log(i)
+      update(i); // Call function to reassing dots
     })
 
+      // inside the div make a label with the text of the year array
+  form.append('label')
+  .attr('for', (d,i) => d)
+  .text((d,i) => idInput[i])
 
 
+    function update(i) {
 
-  //update function for the checkboxes
+      const checkedBoxes = data.filter((row) => i.includes(row.id))
+      // console.log(i)
+
+      updateDots(checkedBoxes);
+      console.log(checkedBoxes)
+      // console.log(checkedBoxes)
+    }
+  
+    })
 
 
 
