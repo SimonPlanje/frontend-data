@@ -20,9 +20,6 @@ const g = svg.append('g')
 var radius = '2px'
 
 
-//Bepaal kleur voor circles
-var color = d3.scaleOrdinal(d3.schemeSpectral[4])
-//source: https://www.d3-graph-gallery.com/graph/bubblemap_buttonControl.html
 
 //ZOOMEN
 svg.call(d3.zoom().on('zoom', zoomed))
@@ -59,37 +56,45 @@ d3.json(
   'https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/onlineData/longLatDisabled.json'
 ).then(data => {
 
-  color.domain(data.map(d => d.id))
+//Bepaal kleur voor circles
+let color = d3.scaleOrdinal()
+.domain(['disabled', 'charging', 'both', 'none'])
+.range(['yellow', 'purple', 'lime', 'red'])
+//source: https://www.d3-graph-gallery.com/graph/bubblemap_buttonControl.html
+
+const colorValue = d => d.id
+
+// const color = d3.scaleOrdinal(d3.schemeCategory10)
+
   let idInput = color.domain()
 
-g.selectAll('circle').data(data)
-  .enter()
-  .append('circle')
-  .attr('class', (d) => d.id)
-  .attr('cx', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[0])
-  .attr('cy', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[1])
-  .attr('r', radius)
-  .attr('fill', (d) => color(d.id))
-  .attr('stroke', (d) => color(d.id))
-  .attr('fill-opacity', 0.3)
-
-
+// g.selectAll('circle').data(data)
+//   .enter()
+//   .append('circle')
+//   .attr('class', (d) => d.id)
+//   .attr('cx', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[0])
+//   .attr('cy', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[1])
+//   .attr('r', radius)
+//   .attr('fill', (d) => color(colorValue(d)))
+//   .attr('stroke', (d) => color(colorValue(d)))
+//   .attr('fill-opacity', 0.3)
 
   function updateDots(data) {
     const dots = g.selectAll('circle')
                      .data(data)
-
+                      
     dots 
     .attr('cx', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[0])
     .attr('cy', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[1])
   
     dots.enter()
         .append('circle')
-        .attr('r', 4)
+        .attr('r', radius)
+        .attr('class', d => d.id)
         .attr('fill', (d) => color(d.id))
         .attr('stroke', (d) => color(d.id))
         .attr('fill-opacity', 0.3)
-        .attr('r', radius)
+        .attr('r', 6)
         .attr('cx', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[0])
         .attr('cy', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[1])
 
@@ -97,7 +102,6 @@ g.selectAll('circle').data(data)
     dots.exit()
           .remove()
     }
-
 
  // Make a div inside form element for all payment methods
  const form = d3.select('form')
@@ -112,56 +116,60 @@ g.selectAll('circle').data(data)
   form.append('input')
     .attr('type', 'radio')
     .attr('name', 'radio')
-    .attr('id', (d,i) => idInput[i])
     .on('change', (d, i) => {
-      if(i == 'disabled'){
+      if(i === 'disabled'){
         i = ['disabled', 'both']
-      } else if(i == 'charging'){
+      } else if(i === 'charging'){
        i = ['charging','both']
-      }
-      console.log(i)
+      }else if(i === 'both'){
+        i = ['charging','both', 'none', 'disabled']
+       }else if(i === 'none'){
+         i = ['none']
+       }
       update(i); // Call function to reassing dots
+      console.log(i)
     })
 
       // inside the div make a label with the text of the year array
   form.append('label')
-  .attr('for', (d,i) => d)
-  .text((d,i) => idInput[i])
+  .attr('for', (d,i) => (d))
+  .text((d,i) => (d))
+  .style('background-color', (d, i) => color(d))
+
 
 
     function update(i) {
 
       const checkedBoxes = data.filter((row) => i.includes(row.id))
-      // console.log(i)
 
       updateDots(checkedBoxes);
       console.log(checkedBoxes)
-      // console.log(checkedBoxes)
     }
   
     })
 
 
-
-
 //legend
-svg
-  .selectAll('svg')
-  .data(color.domain())
-  .enter()
-  .append('circle')
-  .attr('transform', (d, i) => `translate(${100},${i * 30 + 20})`)
-  .attr('r', 6)
-  .attr('fill', (d) => color(d))
-  .attr('stroke', (d) => color(d))
-  .attr('fill-opacity', 0.3)
+// svg
+//   .selectAll('svg')
+//   .data(color)
+//   .enter()
+//   .append('circle')
+//   .attr('transform', (d, i) => `translate(${100},${i * 30 + 20})`)
+//   .attr('r', 6)
+//   .attr('fill', (d) => color(d))
+//   .attr('stroke', (d) => color(d))
+//   .attr('fill-opacity', 0.3)
 
-svg
-  .selectAll('svg')
-  .data(color.domain())
-  .enter()
-  .append('text')
-  .text((d) => d)
-  .style('fill', 'white')
-  .attr('alignment-baseline', 'middle')
-  .attr('transform', (d, i) => `translate(${120},${i * 30 + 20})`)
+// svg
+//   .selectAll('svg')
+//   .data(color)
+//   .enter()
+//   .append('text')
+//   .text((d) => d)
+//   .style('fill', 'white')
+//   .attr('alignment-baseline', 'middle')
+//   .attr('transform', (d, i) => `translate(${120},${i * 30 + 20})`)
+
+
+
