@@ -3,7 +3,8 @@
     "provincie": "Gelderland",
     "lengte_m": 1059,
     "regio": "Achterhoek",
-    "coordinates": [52.16263, 6.51925]
+    "longitude": 52.16263,
+    "latitude": "6.51925"
   },
   {
     "provincie": "Friesland",
