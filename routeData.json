@@ -1,24 +1,26 @@
-{
-  "provincie": "Gelderland",
-  "lengte_m": 1059,
-  "regio": "Achterhoek",
-  "coordinates": [52.16263, 6.51925]
-},
-{
-  "provincie": "Friesland",
-  "lengte_m": 1644,
-  "regio": "Friesland",
-  "coordinates": [53.08327, 6.09978]
-},
-{
-  "provincie": "Groningen",
-  "lengte_m": 4456,
-  "regio": "Groningen",
-  "coordinates": [53.3377, 6.29849]
-},
-{
-  "provincie": "Groningen",
-  "lengte_m": 2159,
-  "regio": "Groningen",
-  "coordinates": [53.24236, 6.95265]
-}
+[
+  {
+    "provincie": "Gelderland",
+    "lengte_m": 1059,
+    "regio": "Achterhoek",
+    "coordinates": [52.16263, 6.51925]
+  },
+  {
+    "provincie": "Friesland",
+    "lengte_m": 1644,
+    "regio": "Friesland",
+    "coordinates": [53.08327, 6.09978]
+  },
+  {
+    "provincie": "Groningen",
+    "lengte_m": 4456,
+    "regio": "Groningen",
+    "coordinates": [53.3377, 6.29849]
+  },
+  {
+    "provincie": "Groningen",
+    "lengte_m": 2159,
+    "regio": "Groningen",
+    "coordinates": [53.24236, 6.95265]
+  }
+]
