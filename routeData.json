@@ -10,18 +10,21 @@
     "provincie": "Friesland",
     "lengte_m": 1644,
     "regio": "Friesland",
-    "coordinates": [53.08327, 6.09978]
+    "longitude": 53.08327,
+    "latitude": 6.09978
   },
   {
     "provincie": "Groningen",
     "lengte_m": 4456,
     "regio": "Groningen",
-    "coordinates": [53.3377, 6.29849]
+    "longitude": 53.3377,
+    "latitude": 6.29849
   },
   {
     "provincie": "Groningen",
     "lengte_m": 2159,
     "regio": "Groningen",
-    "coordinates": [53.24236, 6.95265]
+    "longitude": 53.24236,
+    "latitude": 6.95265
   }
 ]
