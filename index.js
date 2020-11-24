@@ -51,19 +51,17 @@ d3.json('https://cartomap.github.io/nl/wgs84/gemeente_2020.topojson').then(
 )
 
 
-d3.json('https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/routeData.json')
+d3.json('https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/geoData_0.json')
   .then(data => {
 
     g.selectAll('circle').data(data)
       .enter().append('circle')
       .attr('class', 'route')
-      .attr('cx', d => console.log(projection([d.longitude, d.latitude])[0]))
-      .attr('cy', d => console.log(projection([d.longitude, d.latitude])[1]))
-      .attr('r', '20')
+      .attr('cx', d => projection([d.coordinates[0], d.coordinates[1]])[0])
+      .attr('cy', d => projection([d.coordinates[1], d.coordinates[1]])[1])
+      .attr('r', '1')
       // .attr('height', '20')
       .attr('fill', 'white')
-
-
   })
 
 
@@ -89,20 +87,6 @@ d3.json('https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/routeD
 
 
 
-// function routeMap(data){
-// g.selectAll('circle').data(data)
-// .enter()
-// .append('circle')
-// .attr('class', 'route')
-// .attr('cx', (d) =>  projection(((d.wkb_geometry.coordinates[0])[0]))[0])
-// .attr('cy', (d) =>  projection(((d.wkb_geometry.coordinates[0])[0]))[1])
-// .attr('r', 20)
-// .attr('fill', 'white')
-
-// }
-
-
-
 //----PLOTTING THE LON LAT AS CIRCLES ON THE MAP ⬇️⬇️⬇️------
 d3.json(
   'https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/onlineData/longLatDisabled.json'
@@ -120,16 +104,16 @@ d3.json(
 
   let idInput = color.domain()
 
-  // g.selectAll('circle').data(data)
-  //   .enter()
-  //   .append('circle')
-  //   .attr('class', (d) => d.id)
-  //   .attr('cx', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[0])
-  //   .attr('cy', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[1])
-  //   .attr('r', radius)
-  //   .attr('fill', (d) => color(colorValue(d)))
-  //   .attr('stroke', (d) => color(colorValue(d)))
-  //   .attr('fill-opacity', 0.3)
+  g.selectAll('circle').data(data)
+    .enter()
+    .append('circle')
+    .attr('class', (d) => d.id)
+    .attr('cx', (d) => console.log(projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[0]))
+    .attr('cy', (d) => console.log(projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[1]))
+    .attr('r', radius)
+    .attr('fill', (d) => color(colorValue(d)))
+    .attr('stroke', (d) => color(colorValue(d)))
+    .attr('fill-opacity', 0.3)
 
   //   function updateDots(data) {
   //     const dots = g.selectAll('circle')
