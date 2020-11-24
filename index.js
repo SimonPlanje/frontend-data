@@ -18,6 +18,7 @@ const pathGenerator = d3.geoPath().projection(projection)
 //geoMercator: this is the type of projection type
 
 const g = svg.append('g')
+const v = svg.append('g')
 var radius = '2px'
 
 
@@ -27,6 +28,8 @@ svg.call(d3.zoom().on('zoom', zoomed))
 
 function zoomed({ transform }) {
   g.attr('transform', transform)
+  v.attr('transform', transform)
+
 }
 //source: https://www.youtube.com/watch?v=9ZB1EgaJnBU&t=904s
 
@@ -51,40 +54,6 @@ d3.json('https://cartomap.github.io/nl/wgs84/gemeente_2020.topojson').then(
 )
 
 
-d3.json('https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/geoData_0.json')
-  .then(data => {
-
-    g.selectAll('circle').data(data)
-      .enter().append('circle')
-      .attr('class', 'route')
-      .attr('cx', d => projection([d.coordinates[0], d.coordinates[1]])[0])
-      .attr('cy', d => projection([d.coordinates[1], d.coordinates[1]])[1])
-      .attr('r', '1')
-      // .attr('height', '20')
-      .attr('fill', 'white')
-  })
-
-
-// const deData = routeData[0]
-// console.log(deData)
-
-// const filterData = removeUndef(deData)
-// console.log('filtereddata', filterData)
-
-// function removeUndef(data){
-//   return data.filter(result =>{
-//     return result.wkb_geometry !== null
-//   } )
-// }
-
-// const formatData = topojson.feature(deData[0], deData[0]?.wkb_geometry )
-// console.log(formatData)
-
-// const formatData = topojson.feature(deData, deData.wkb_geometry.coordinates)
-// console.log(formatData)
-// const makeRouteMap = routeMap(deData)
-
-
 
 
 //----PLOTTING THE LON LAT AS CIRCLES ON THE MAP ⬇️⬇️⬇️------
@@ -94,8 +63,8 @@ d3.json(
 
   //Bepaal kleur voor circles
   let color = d3.scaleOrdinal()
-    .domain(['disabled', 'charging', 'both', 'none'])
-    .range(['yellow', 'purple', 'lime', 'red'])
+    .domain(['disabled', 'charging', 'both'])
+    .range(['#fc3f79'])
   //source: https://www.d3-graph-gallery.com/graph/bubblemap_buttonControl.html
 
   const colorValue = d => d.id
@@ -108,82 +77,97 @@ d3.json(
     .enter()
     .append('circle')
     .attr('class', (d) => d.id)
-    .attr('cx', (d) => console.log(projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[0]))
-    .attr('cy', (d) => console.log(projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[1]))
+    .attr('cx', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[0])
+    .attr('cy', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[1])
     .attr('r', radius)
     .attr('fill', (d) => color(colorValue(d)))
     .attr('stroke', (d) => color(colorValue(d)))
     .attr('fill-opacity', 0.3)
 
-  //   function updateDots(data) {
-  //     const dots = g.selectAll('circle')
-  //       .data(data)
+  function updateDots(data) {
+    const dots = g.selectAll('circle')
+      .data(data)
 
-  //     dots
-  //       .attr('cx', (d) => console.log('long', projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[0]))
-  //       .attr('cy', (d) => console.log('lat', projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[1]))
+    dots
+      .attr('cx', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[0])
+      .attr('cy', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[1])
 
-  //     dots.enter()
-  //       .append('circle')
-  //       .attr('r', radius)
-  //       .attr('class', d => d.id)
-  //       .attr('fill', (d) => color(d.id))
-  //       .attr('stroke', (d) => color(d.id))
-  //       .attr('fill-opacity', 0.3)
-  //       .attr('r', 6)
-  //       .attr('cx', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[0])
-  //       .attr('cy', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[1])
-
-
-  //     dots.exit()
-  //       .remove()
-  //   }
-
-  //   // Make a div inside form element for all payment methods
-  //   const form = d3.select('form')
-  //     .selectAll('div')
-  //     .data(idInput)
-  //     .enter()
-  //     .append('div')
-  //     .attr('class', 'checkBox')
+    dots.enter()
+      .append('circle')
+      .attr('r', radius)
+      .attr('class', d => d.id)
+      .attr('fill', (d) => color(d.id))
+      .attr('stroke', (d) => color(d.id))
+      .attr('fill-opacity', 0.3)
+      .attr('r', radius)
+      .attr('cx', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[0])
+      .attr('cy', (d) => projection([d.accessPointLocation[0].longitude, d.accessPointLocation[0].latitude])[1])
 
 
-  //   // Make radiobuttons inside the input form
-  //   form.append('input')
-  //     .attr('type', 'radio')
-  //     .attr('name', 'radio')
-  //     .on('change', (d, i) => {
-  //       if (i === 'disabled') {
-  //         i = ['disabled', 'both']
-  //       } else if (i === 'charging') {
-  //         i = ['charging', 'both']
-  //       } else if (i === 'both') {
-  //         i = ['charging', 'both', 'none', 'disabled']
-  //       } else if (i === 'none') {
-  //         i = ['none']
-  //       }
-  //       update(i); // Call function to reassing dots
-  //       console.log(i)
-  //     })
+    dots.exit()
+      .remove()
+  }
 
-  //   // inside the div make a label with the text of the year array
-  //   form.append('label')
-  //     .attr('for', (d, i) => (d))
-  //     .text((d, i) => (d))
-  //     .style('background-color', (d, i) => color(d))
+  // Make a div inside form element for all payment methods
+  const form = d3.select('form')
+    .selectAll('div')
+    .data(idInput)
+    .enter()
+    .append('div')
+    .attr('class', 'checkBox')
 
 
+  // Make radiobuttons inside the input form
+  form.append('input')
+    .attr('type', 'radio')
+    .attr('name', 'radio')
+    .on('change', (d, i) => {
+      if (i === 'disabled') {
+        i = ['disabled', 'both']
+      } else if (i === 'charging') {
+        i = ['charging', 'both']
+      } else if (i === 'both') {
+        i = ['charging', 'both', 'none', 'disabled']
+      } else if (i === 'none') {
+        i = ['none']
+      }
+      update(i); // Call function to reassing dots
+      console.log(i)
+    })
 
-  //   function update(i) {
+  // inside the div make a label with the text of the year array
+  form.append('label')
+    .attr('for', (d, i) => (d))
+    .text((d, i) => (d))
+    .style('background-color', (d, i) => color(d))
 
-  //     const checkedBoxes = data.filter((row) => i.includes(row.id))
 
-  //     updateDots(checkedBoxes);
-  //     console.log(checkedBoxes)
-  //   }
+
+  function update(i) {
+
+    const checkedBoxes = data.filter((row) => i.includes(row.id))
+
+    updateDots(checkedBoxes);
+    console.log(checkedBoxes)
+  }
 
 })
 
+
+d3.json('https://raw.githubusercontent.com/SimonPlanje/frontend-data/main/geoData_0.json')
+  .then(data => {
+
+    v.selectAll('svg').data(data)
+      .enter()
+      .append('circle')
+      .attr('cx', (d) => projection([d.coordinates[1], d.coordinates[0]])[0])
+      .attr('cy', (d) => projection([d.coordinates[1], d.coordinates[0]])[1])
+      .attr('r', .7)
+      .attr('fill', 'lime')
+      .attr('opacity', .2)
+
+
+  })
 
 // g.selectAll('circle')
 //     .data([0])
